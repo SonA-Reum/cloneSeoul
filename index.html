@@ -15,10 +15,9 @@
 </style>
     <!-- hader -->
     <header>
-        <div class="header--top" tabindex="0"><p class="ar--flex ar--flex-algn-cntr wrap">이 누리집은 대한민국 공식 전자정부 누리집입니다.</p></div>
-        <div class="header--nav wrap ar--flex ar--flex-algn-cntr">
+        <!-- <div class="header--top" tabindex="0"><p class="ar--flex ar--flex-algn-cntr wrap">이 누리집은 대한민국 공식 전자정부 누리집입니다.</p></div> -->
+        <!-- <div class="header--nav wrap ar--flex ar--flex-algn-cntr">
             <h1 class="logo"><a href="#" title="메인페이지 바로가기"></a></h1>
-            <!-- <h1 class="logo ar--flex ar--flex-algn-cntr"><a href="https://www.seoul.go.kr/main/index.jsp#n" title="메인페이지 바로가기"></a></h1> -->
             <nav class="ar--flex ar--flex-jstf-sb">
                 <ul class="gnb ar--flex ar--flex-algn-cntr" role="menu">
                     <li role="menuitem"><a href="javascript:void(0)">서울소식</a></li>
@@ -35,9 +34,9 @@
                     <li role="menuitem"><a href="javascript:void(0)">전자우편</a></li>
                 </ul>
             </nav>
-        </div>
+        </div> -->
         <div class="header--btom wrap">
-            <div class="header--lang ar--flex ar--flex-jstf-end">
+            <!-- <div class="header--lang ar--flex ar--flex-jstf-end">
                 <label for="cityLang" class="ar--scr-only">언어 선택</label>
                 <select id="cityLang" class="ar--select">
                     <option value="http://english.seoul.go.kr/?SSid=101_01">ENGLISH</option>
@@ -47,7 +46,7 @@
                     <option value="http://world.seoul.go.kr/">WorldWide</option>
                 </select>
                 <input type="button" value="GO" title="서울시 다국어 홈페이지로 이동-새창">
-            </div>
+            </div> -->
             <div class="header--srch ar--flex ar--flex-jstf-sb">
                 <h1 class="logo--new"><a href="javascript:void(0)"><span class="ar--scr-only">동행·매력 특별시 서울</span></a></h1>
                 <div class="srch">
@@ -75,52 +74,51 @@
     <main>
         <!-- 슬라이드 / 배너 영역 -->
         <div class="visual wrap ar--flex ar--flex-jstf-cntr">
-            <div class="visual--slide ar--flex">
-                <!-- 탭 리스트 -->
-                <div class="tab--list" role="tablist" aria-label="슬라이드 메뉴">
-                    <button role="tab" id="tab1" class="active" aria-selected="true" aria-controls="panel1"><i></i>주요뉴스</button>
-                    <button role="tab" id="tab2" aria-selected="false" aria-controls="panel2"><i></i>시민참여</button>
+            <div class="visual__unit">
+                <!-- 주요뉴스 슬라이드 -->
+                <div class="slide__group slide__group--news ar--flex">
+                    <button class="slide--sel-btn active"><i></i>주요뉴스</button>
+                    <div>
+                        <ul class="slide slide--01">
+                            <li class="slide--page"><a href="#"></a></li>
+                            <li class="slide--page"><a href="#"></a></li>
+                            <li class="slide--page"><a href="#"></a></li>
+                        </ul>
+                        <div class="slide--ctl ar--flex ar--flex-algn-cntr ar--flex-jstf-sb">
+                            <p>첫번쨰</p>
+                            <div class="ar--flex ar--flex-algn-cntr">
+                                <span class="slide--ctl--page"><i>1</i>/10</span>
+                                <nav class="slide--ctl--nav ar--flex ar--flex-algn-cntr">
+                                    <a href="#" class="slide-pause">멈춤</a>
+                                    <a href="#" class="slide-play">재생</a>
+                                </nav>
+                                <button class="ar--btn ar--size-sm ar--flex ar--flex-algn-cntr">전체보기</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- 탭 패널 -->
-                <div id="panel1" class="tab--cont active" role="tabpanel" tabindex="0" aria-labelledby="tab1">
-                    <!-- 주요뉴스 슬라이드 -->
-                    <div class="visual--slick slick--01">
-                        <div class="slick--page"></div>
-                        <div class="slick--page"></div>
-                        <div class="slick--page"></div>
-                    </div>
-                    <div class="slick--ctl slick--ctl--01 ar--flex ar--flex-jstf-sb">
-                        <p>dfdfakdfjkladjflkajdl</p>
-                        <div class="ar--flex ar--flex-algn-cntr">
-                            <span class="slick--ctl--page"><i>1</i>/10</span>
-                            <nav class="slick--ctl--nav ar--flex ar--flex-algn-cntr">
-                                <a class="slick-pause">멈춤</a>
-                                <a class="slick-play">재생</a>
-                            </nav>
-                            <button class="ar--btn ar--size-sm ar--flex ar--flex-algn-cntr">전체보기</button>
+                <!-- 시민참여 슬라이드 -->
+                <div class="slide__group slide__group--together ar--flex">
+                    <button class="slide--sel-btn"><i></i>시민참여</button>
+                    <div>
+                        <ul class="slide slide--02">
+                            <li class="slide--page"><a href="#"></a></li>   
+                            <li class="slide--page"><a href="#"></a></li>
+                        </ul>
+                        <div class="slide--ctl ar--flex ar--flex-algn-cntr ar--flex-jstf-sb">
+                            <p>두번째</p>
+                            <div class="ar--flex ar--flex-algn-cntr">
+                                <span class="slide--ctl--page"><i>1</i>/10</span>
+                                <nav class="slide--ctl--nav ar--flex ar--flex-algn-cntr">
+                                    <a href="#" class="slide-pause">멈춤</a>
+                                    <a href="#" class="slide-play">재생</a>
+                                </nav>
+                                <button class="ar--btn ar--size-sm ar--flex ar--flex-algn-cntr">전체보기</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div id="panel2" class="tab--cont" role="tabpane2" tabindex="0" aria-labelledby="tab2">
-                    <!-- 시민참여 -->
-                    <div class="visual--slick slick--02">
-                        <div class="slick--page"></div>
-                        <div class="slick--page"></div>
-                    </div>
-                    <div class="slick--ctl slick--ctl--02 ar--flex ar--flex-jstf-sb">
-                        <p>2번째</p>
-                        <div class="ar--flex ar--flex-algn-cntr">
-                            <span class="slick--ctl--page"><i>1</i>/10</span>
-                            <nav class="slick--ctl--nav ar--flex ar--flex-algn-cntr">
-                                <a class="slick-pause">멈춤</a>
-                                <a class="slick-play">재생</a>
-                            </nav>
-                            <button class="ar--btn ar--size-sm">전체보기</button>
-                        </div>
-                    </div>
-                </div>
-                  
             </div>
             <section class="visual--bnr">
                 <div class="bnr--mayor-news">
@@ -370,118 +368,167 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script>
-
-        // 탭메뉴
-        const tabBtn = document.querySelectorAll('.tab--list button'),
-              tabCont = document.querySelectorAll('.tab--cont');
-
-        tabBtn.forEach((btn, index) => {
-            btn.addEventListener('click', () => {
-                const num = index + 1;
-                
-                document.querySelector('.tab--list .active')?.classList.remove('active');
-                document.querySelector('.tab--cont.active')?.classList.remove('active');
-
-                btn.classList.add('active');
-                document.getElementById(`panel${num}`)?.classList.add('active');
-            });
-        });
-
-
-        //슬릭
-
-    </script>
-
-    <script>
+    
         document.addEventListener("DOMContentLoaded", function () {
-            const tabs = document.querySelectorAll("[role='tab']");
-            const panels = document.querySelectorAll("[role='tabpanel']");
-            const slideControls = document.querySelectorAll(".slick--ctl--nav button");
+    
+            let $slideSelBtn = $(".slide--sel-btn");
+            let $activeSlide = ''; // 활성화된 슬라이드
+            let $totalSlide = ''; //총 슬라이드 갯수
+            let $currentSlide = ''; //현재 슬라이드 페이지
+            let $num = 0;
+            let $control = $();
+            let $ctrlNum = 0; //컨트롤러 갯수
+            let $activeBtn = $();
+    
+            $(".slide--sel-btn").on("focus", function () {
+                $(".slide--sel-btn").removeClass("active");
+                $(this).addClass("active");
+                $activeSlide = $(this).next("div").find(".slide"); // 활성화된 슬라이드 선택
+                $activeBtn = $(this); // 현재 활성화된 버튼 넣기
+    
+                //변수 재할당 해주고
+                $totalSlide = $activeSlide.slick("getSlick").slideCount;
+                $currentSlide = $activeSlide.slick("slickCurrentSlide");
+                $num = $totalSlide;
+    
+                $(document).on("keydown", function (event) {
+                    let $currentFocus = $(document.activeElement);
 
-            let activeTab = 0;
-            let activeControlIndex = 0;
-
-            // 탭 활성화 함수
-            // function activateTab(index) {
-            //     tabs.forEach((tab, i) => {
-            //         tab.classList.toggle("active", i === index);
-            //         tab.setAttribute("aria-selected", i === index ? "true" : "false");
-            //     });
-            //     panels.forEach((panel, i) => {
-            //         panel.classList.toggle("active", i === index);
-            //     });
-
-            //     activeTab = index;
-            //     panels[index].focus();
-            // }
-
-            // 키보드 포커스 이동 (탭 키)
-            document.addEventListener("keydown", function (event) {
-                const isLastSlide = activeControlIndex === slideControls.length - 1;
-
-                if (event.key === "Tab") {
-                    console.log('dd');
-                    if (isLastSlide) {
-                        if (activeTab === 0) {
-                            activateTab(1); // 시민참여 탭으로 이동
+                    if (event.key === "Tab") {
+                        if (event.shiftKey) {
+                            //역순 이동
+                            event.preventDefault();
+                            let $prevElement = getPrevFocusableElement();
+                            if ($prevElement.length) {
+                                $prevElement.focus();
+                                return; // 정방향 Tab 이동 시 슬라이드가 넘어가는 문제 방지
+                            }
                         } else {
-                            activateTab(0); // 주요뉴스 탭으로 이동
+                            //정방향
+                            if ($currentFocus.is(".slide--sel-btn")) {
+                                event.preventDefault();
+                                //console.log("슬라이드 버튼에서 Tab 눌림");
+
+                                if ($currentFocus.hasClass("active")) {
+                                    //console.log("슬라이드 이동 실행!");
+                                    tabSlide();
+                                } else {
+                                   // console.log("슬라이드 버튼 활성화 실행!");
+                                    tabActive($currentFocus);
+                                }
+                            }
                         }
-                        activeControlIndex = 0;
-                        event.preventDefault();
+                    }
+                });
+
+            });
+    
+            $(".slide--sel-btn").on("click", function () {
+                $(".slide--sel-btn").removeClass("active");
+                $(this).addClass("active");
+                $activeSlide = $(this).next("div").find(".slide");// 활성화된 슬라이드 선택
+            });
+    
+            function tabSlide() {
+                console.log('진입1');
+                if (event.key === "Tab") {
+                    event.preventDefault();
+                    if ($num > 0) {
+                        $activeSlide.slick("slickNext"); // 다음 슬라이드로 이동
+                        $num = $num - 1;
                     } else {
-                        slideControls[activeControlIndex].focus();
-                        activeControlIndex++;
-                        event.preventDefault();
+                        console.log('진입1-1');
+                        $control = $activeSlide.closest('ul').next("div").find(".slide-prev, .slide-pause, .slide-play, .slide-next, button");
+                        controlTurn();
                     }
                 }
-            });
+            }
+    
+            function controlTurn() { //컨트롤러 버튼 순회하기
 
-            // 슬라이드 컨트롤 포커스 순환
-            slideControls.forEach((control, index) => {
-                control.addEventListener("focus", function () {
-                    activeControlIndex = index;
-                });
-            });
+                console.log('진입2');
+                if ($ctrlNum < 5) {
+                    $control.eq($ctrlNum).focus();
+                    $ctrlNum = $ctrlNum + 1;
+                    
+                    console.log($ctrlNum);
+                    console.log('진입3');
+                } else {
+                    console.log('컨트롤의 마지막');
+                    let $parent = $currentFocus.closest('.slide__group');
+
+                    if($parent.hasClass('.slide__group--news')) { // 첫번째 버튼일 때, 두번째 버튼으로 넘기고
+                        $(".slide--sel-btn").removeClass("active");
+                        $activeBtn.closest('div').next().find('.slide--sel-btn').addClass("active");
+
+                    } else { //두번째 버튼일 때는 그다음 포커스로 넘어간다
+                        console.log('흑흑');
+                    }
+                }
 
 
+            }
+    
 
-            // Slick 슬라이더 초기화
-            let $slider01 = $('.slick--01');
-            let $slider02 = $('.slick--02');
+            function getPrevFocusableElement() {
+                let focusableElements = $('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                let currentIndex = focusableElements.index(document.activeElement);
 
-            $('.slick--01').slick({
+                if (currentIndex > 0) {
+                    return focusableElements.eq(currentIndex - 1);
+                }
+                return $(); // 빈 jQuery 객체 반환 (null 대신)
+            }
+
+
+            //Slick 슬라이더 초기화
+            let $slider01 = $('.slide__group--news .slide');
+            let $slider02 = $('.slide__group--together .slide');
+    
+            $('.slide__group--news .slide').slick({
                 infinite: true,
-                speed: 300,
+                speed: 500,
                 slidesToShow: 1,
-                autoplay: true,
-                appendArrows : $('.slick--ctl--01 .slick--ctl--nav'),
-                nextArrow: '<a class="slick-next" href="#">다음</a>',
-                prevArrow: '<a class="slick-prev" href="#">이전</a>',
+                autoplay: false,
+                fade: true,
+                cssEase: 'linear',
+                appendArrows : $('.slide__group--news .slide--ctl--nav'),
+                nextArrow: '<a class="slide-next" href="#" tabindex="0">다음</a>',
+                prevArrow: '<a class="slide-prev" href="#" tabindex="0">이전</a>',
         
             });
-            $('.slick--02').slick({
+    
+            $('.slide__group--together .slide').slick({
                 infinite: true,
-                speed: 300,
+                speed: 500,
                 slidesToShow: 1,
-                autoplay: true,
-                appendArrows : $('.slick--ctl--02 .slick--ctl--nav'),
-                nextArrow: '<a class="slick-next" href="#">다음</a>',
-                prevArrow: '<a class="slick-prev" href="#">이전</a>',
+                autoplay: false,
+                fade: true,
+                cssEase: 'linear',
+                appendArrows : $('.slide__group--together .slide--ctl--nav'),
+                nextArrow: '<a class="slide-next" href="#">다음</a>',
+                prevArrow: '<a class="slide-prev" href="#">이전</a>',
         
             });
-
+    
             // 일시정지 버튼 기능
-            $('.slick-pause').on('click', function () {// 슬라이드 멈춤
+            $('.slide__group--news .slide-pause').on('click', function () {
                 $slider01.slick('slickPause'); 
-                $slider02.slick('slickPause'); 
             });
-
+            $('.slide__group--together .slide-pause').on('click', function () {
+                $slider01.slick('slickPause'); 
+            });
+    
             // 재생 버튼 기능
-            $('.slick-play').on('click', function () {// 슬라이드 다시 재생
+            $('.slide__group--news .slide-play').on('click', function () {
                 $slider01.slick('slickPlay'); 
-                $slider02.slick('slickPlay'); 
             });
+            $('.slide__group--together .slide-play').on('click', function () {
+                $slider01.slick('slickPlay'); 
+            });
+    
+
+    
         });
     </script>
 </body>
