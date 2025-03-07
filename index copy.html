@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>작업중 서울특별시 - 동행·매력 특별시 서울</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+<body>
+    <style>
+        a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible {
+            outline: 3px dotted red !important;
+    }
+</style>
+
+    <!-- contents -->
+    <div class="wrap">
+        <div class="visual wrap ar--flex ar--flex-jstf-cntr">
+            <div class="visual__unit">
+                <!-- 주요뉴스 슬라이드 -->
+                <div class="slide__group slide__group--news ar--flex">
+                    <button class="slide--sel-btn "><i></i>주요뉴스</button>
+                    <div>
+                        <ul class="slide slide--01">
+                            <li class="slide--page"><a href="#"></a></li>
+                            <li class="slide--page"><a href="#"></a></li>
+                            <li class="slide--page"><a href="#"></a></li>
+                        </ul>
+                        <div class="slide--ctl ar--flex ar--flex-algn-cntr ar--flex-jstf-sb">
+                            <p>첫번쨰</p>
+                            <div class="ar--flex ar--flex-algn-cntr">
+                                <span class="slide--ctl--page"><i>1</i>/10</span>
+                                <nav class="slide--ctl--nav ar--flex ar--flex-algn-cntr">
+                                    <a href="#" class="slide-pause">멈춤</a>
+                                    <a href="#" class="slide-play">재생</a>
+                                </nav>
+                                <button class="ar--btn ar--size-sm ar--flex ar--flex-algn-cntr">전체보기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 시민참여 슬라이드 -->
+                <div class="slide__group slide__group--together ar--flex">
+                    <button class="slide--sel-btn active"><i></i>시민참여</button>
+                    <div>
+                        <ul class="slide slide--02">
+                            <li class="slide--page"><a href="#"></a></li>   
+                            <li class="slide--page"><a href="#"></a></li>
+                        </ul>
+                        <div class="slide--ctl ar--flex ar--flex-algn-cntr ar--flex-jstf-sb">
+                            <p>두번째</p>
+                            <div class="ar--flex ar--flex-algn-cntr">
+                                <span class="slide--ctl--page"><i>1</i>/10</span>
+                                <nav class="slide--ctl--nav ar--flex ar--flex-algn-cntr">
+                                    <a href="#" class="slide-pause">멈춤</a>
+                                    <a href="#" class="slide-play">재생</a>
+                                </nav>
+                                <button class="ar--btn ar--size-sm ar--flex ar--flex-algn-cntr">전체보기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <section class="visual--bnr">
+                <div class="bnr--mayor-news">
+                    <h3 class="ar--scr-only">시장님 뉴스</h3>
+                    <a href="https://mayor.seoul.go.kr/oh/seoul/newsView.do?photoGallerySn=3541&curPage=" target="_blank"><span>서울 교통 통합브랜드 'GO SEOUL' 런칭</span></a>
+                </div>
+                <div class="bnr--online-mayor">
+                    <h3 class="ar--scr-only">온라인 시장실</h3>
+                    <a href="https://mayor.seoul.go.kr/" target="_blank"></a>
+                    <a href="https://eungdapso.seoul.go.kr/req/mayor_hope/mayor_hope.do" target="_blank">시장에게 바란다</a>
+                    <div class="bnr--online-mayor__group ar--flex">
+                        <a href="https://mayor.seoul.go.kr/oh/seoul/manifesto.do" class="ar--flex" target="_blank" title="온라인 시장실 홈페이지내 공약(매니페스토) 페이지로 이동(새창)">공약(매니페스토)</a>
+                        <a href="https://idea.seoul.go.kr/" class="ar--flex" target="_blank" title="상상대로 서울 홈페이지로 이동(새창)">정책제안</a>
+                        <a href="https://mvoting.seoul.go.kr/" class="ar--flex" target="_blank" title="엠보팅 홈페이지로 이동(새창)">투표표</a>
+                        <a href="https://research.seoul.go.kr/" class="ar--flex" target="_blank" title="온라인 여론조사 시스템 홈페이지로 이동(새창)">설문조사</a>
+                    </div>
+                </div>
+                <div class="ar--flex">
+                    <a href="http://pf.kakao.com/_WlXsV" target="_blank"><img src="/assets/images/btn-right-kakao-new.png" alt="서울시 카카오톡 채널 추가"></a>
+                    <a href="/seoul/smsAlarm/overView.do" target="_blank"><img src="/assets/images/btn-right-sms-new.png" alt="시정소식 문자알림서비스 신청/해지"></a>
+                </div>
+            </section> -->
+        </div>
+    </div> 
+    <!-- //contents -->
+
+    <!-- 제이쿼리리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- 슬릭 -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            let $slideSelBtn = $(".slide--sel-btn");
+            let $activeSlide = ''; // 활성화된 슬라이드
+            let $totalSlide = ''; //총 슬라이드 갯수
+            let $currentSlide = ''; //현재 슬라이드 페이지
+            let $num = 0;
+            let $control = $();
+            let $ctrlNum = 0; //컨트롤러 갯수
+            let $activeBtn = $();
+
+            $(".slide--sel-btn").on("focus", function () {
+                $(".slide--sel-btn").removeClass("active");
+                $(this).addClass("active");
+                $activeSlide = $(this).next("div").find(".slide"); // 활성화된 슬라이드 선택
+                $activeBtn = $(this); // 현재 활성화된 버튼 넣기
+
+                //변수 재할당 해주고
+                if ($activeSlide.length && $activeSlide.hasClass("slick-initialized")) {
+                    $totalSlide = $activeSlide.slick("getSlick").slideCount;
+                    $currentSlide = $activeSlide.slick("slickCurrentSlide");
+                    $num = $totalSlide;
+                }
+
+                $(document).on("keydown", function (event) {
+                    //tabSlide();
+                    if (event.key === "Tab") {
+                        if (event.shiftKey) {
+                            // Shift + Tab: 이전 요소로 이동하는 로직 추가
+                            event.preventDefault();
+                            movePrev();
+                        } else {
+                            // 일반 Tab: 다음 요소로 이동
+                            event.preventDefault();
+                            tabSlide();
+                        }
+                    }
+                });
+            });
+
+            $(".slide--sel-btn").on("click", function () {
+                $(".slide--sel-btn").removeClass("active");
+                $(this).addClass("active");
+                $activeSlide = $(this).next("div").find(".slide");// 활성화된 슬라이드 선택
+            });
+
+            function tabSlide() {
+                if (event.key === "Tab") {
+                        event.preventDefault();
+                        
+
+
+                        if (event.shiftKey) {
+                            // Shift + Tab: 이전 요소로 이동하는 로직
+                            movePrev();
+                        } else {
+                            if ($num > 0) {
+                                $activeSlide.slick("slickNext"); // 다음 슬라이드로 이동
+                                $num = $num - 1;
+                            } else {
+                                controlTurn();
+                            }
+                        }
+                }
+            }
+
+            function controlTurn() { //컨트롤러 버튼 순회하기
+
+                if (!$control.length) {
+                    $control = $activeSlide.closest('ul').next("div").find(".slide-prev, .slide-pause, .slide-play, .slide-next, button");
+                }
+
+                if ($ctrlNum < 5) {
+                    $control.eq($ctrlNum).focus();
+                    $ctrlNum = $ctrlNum + 1;
+                } else {
+                    $(".slide--sel-btn").removeClass("active");
+                    $activeBtn.closest('div').next().find('.slide--sel-btn').addClass("active");
+                }
+            }
+
+            function movePrev() { // 컨트롤러 역순회하기
+                console.log('역순');
+                if (!$(document.activeElement).closest('.slide--ctl--nav').length) return;
+
+                if (!$control.length) {
+                    $control = $activeSlide.closest('ul').next("div").find(".slide-prev, .slide-pause, .slide-play, .slide-next, button");
+                }
+                if ($ctrlNum !== 0) {
+                    $control.eq($ctrlNum).focus();
+                    $ctrlNum = $ctrlNum - 1;
+                }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+            //Slick 슬라이더 초기화
+            let $slider01 = $('.slide__group--news .slide');
+            let $slider02 = $('.slide__group--together .slide');
+
+            $('.slide__group--news .slide').slick({
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                autoplay: false,
+                fade: true,
+                cssEase: 'linear',
+                appendArrows : $('.slide__group--news .slide--ctl--nav'),
+                nextArrow: '<a class="slide-next" href="#" tabindex="0">다음</a>',
+                prevArrow: '<a class="slide-prev" href="#" tabindex="0">이전</a>',
+        
+            });
+
+            $('.slide__group--together .slide').slick({
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                autoplay: false,
+                fade: true,
+                cssEase: 'linear',
+                appendArrows : $('.slide__group--together .slide--ctl--nav'),
+                nextArrow: '<a class="slide-next" href="#">다음</a>',
+                prevArrow: '<a class="slide-prev" href="#">이전</a>',
+        
+            });
+
+            // 일시정지 버튼 기능
+            $('.slide__group--news .slide-pause').on('click', function () {
+                $slider01.slick('slickPause'); 
+            });
+            $('.slide__group--together .slide-pause').on('click', function () {
+                $slider01.slick('slickPause'); 
+            });
+
+            // 재생 버튼 기능
+            $('.slide__group--news .slide-play').on('click', function () {
+                $slider01.slick('slickPlay'); 
+            });
+            $('.slide__group--together .slide-play').on('click', function () {
+                $slider01.slick('slickPlay'); 
+            });
+
+
+
+            // const tabs = document.querySelectorAll("[role='tab']");
+            // const panels = document.querySelectorAll("[role='tabpanel']");
+            // const slideControls = document.querySelectorAll(".slick--ctl--nav button");
+
+            // let activeTab = 0;
+            // let activeControlIndex = 0;
+
+
+            // // 키보드 포커스 이동 (탭 키)
+            // document.addEventListener("keydown", function (event) {
+            //     const isLastSlide = activeControlIndex === slideControls.length - 1;
+
+            //     if (event.key === "Tab") {
+            //         console.log('dd');
+            //         // if (isLastSlide) {
+            //         //     if (activeTab === 0) {
+            //         //         activateTab(1); // 시민참여 탭으로 이동
+            //         //     } else {
+            //         //         activateTab(0); // 주요뉴스 탭으로 이동
+            //         //     }
+            //         //     activeControlIndex = 0;
+            //         //     event.preventDefault();
+            //         // } else {
+            //         //     slideControls[activeControlIndex].focus();
+            //         //     activeControlIndex++;
+            //         //     event.preventDefault();
+            //         // }
+            //     }
+            //     $(document).on("keydown", function (event) {
+            //         if (event.key === "Tab") {
+            //             event.preventDefault();
+
+            //             let $activeSlider = $(".slick--01.slick-initialized, .slick--02.slick-initialized"); // 현재 Slick 슬라이더 찾기
+
+            //             if ($activeSlider.length) { // 슬라이더가 존재할 경우 실행
+            //                 let totalSlides = $activeSlider.slick("getSlick").slideCount; // 전체 슬라이드 개수
+            //                 let currentSlide = $activeSlider.slick("slickCurrentSlide"); // 현재 슬라이드 번호
+
+            //                 console.log(totalSlides);
+            //                 console.log(currentSlide);
+
+            //                 if (currentSlide < totalSlides - 1) {
+            //                     $activeSlider.slick("slickNext"); // 다음 슬라이드로 이동
+            //                 } else {
+            //                     console.log("마지막 슬라이드입니다!");
+                                
+            //                     $activeSlider.find(".slick-prev").focus();
+
+
+
+
+
+            //                     // // 다음 탭으로 포커스 이동
+            //                     // let $nextTab = $("#tab2");
+            //                     // if ($nextTab.length) {
+            //                     //     $nextTab.focus();
+            //                     // }
+            //                 }
+            //             }
+                       
+            //         }
+            //     });
+
+            // });
+
+            // // 슬라이드 컨트롤 포커스 순환
+            // slideControls.forEach((control, index) => {
+            //     control.addEventListener("focus", function () {
+            //         activeControlIndex = index;
+            //     });
+            // });
+
+
+        });
+    </script>
+
+</body>
+</html>

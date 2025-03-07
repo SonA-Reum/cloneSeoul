@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+* {
+  color: #222;
+	font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+/* reset */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+
+body{line-height:1;font-family:"Pretendard-Regular", sans-serif; font-size:1rem;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block;}
+ul, li, ol{list-style:none;}
+blockquote, q{quotes:none;}
+blockquote:before, blockquote:after, q:before, q:after{content:'';content:none;}
+
+em{font-style:normal;}
+a{margin:0;padding:0;background:transparent;color:#333;text-decoration:none!important;outline:none;vertical-align:baseline;}
+a:hover{text-decoration:none;}
+u {text-decoration: none;}
+i {font-style: normal !important; display: inline-block; }
+img{vertical-align:top;border:none;}
+form{border:none;}
+table{border-collapse:collapse;border-spacing:0;}
+legend, .blind{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:0;height:0;font-size:0;line-height:0;}
+select, button{outline:none;border:none;}
+button{background-color: transparent; padding: 0;}
+
+select::expand{display:none;}
+select::-ms-expand{display:none;}
+select::-webkit-expand{display:none;}
+
+input{background:none;outline:none; border: none;}
+input::input-placeholder{color:#1f8ccc;}
+input::-webkit-input-placeholder{color:#1f8ccc;}
+
+input[type="radio"]{-webkit-appearance:radio; appearance:radio;}
+input[type="checkbox"]{-webkit-appearance:checkbox; appearance:checkbox;}
+input[type="button"]{-webkit-appearance:button; appearance:button;}
+
+*, *:before, *:after{box-sizing:border-box;-webkit-box-sizing:border-box;}
+
+/* Add replacementz focus styling here (i.e. border)*/
+//input[type="button"]:focus, button:focus, a:focus{outline:0;}
+
+/* Webkit / Chrome Specific CSS to remove tap highlight color */
+input, button, a{-webkit-tap-highlight-color:transparent;}
+
+/* IE X 버튼 없애기 */
+input[type=text]::-ms-clear{display:none;}
+
+/* Chrome 배경색 및 이미지 출력 */
+*{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
+
+/* reset end */
+
+// 버튼 폰트 스타일
+button {
+  font-family: "NanumSquareOTF_ac",sans-serif;
+  cursor: pointer;
+}
+
+
+

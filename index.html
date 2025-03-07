@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>작업중 서울특별시 - 동행·매력 특별시 서울</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+<body>
+    <style>
+        a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible {
+            outline: 3px dotted red !important;
+    }
+</style>
+    <!-- hader -->
+    <header>
+        <div class="header--top" tabindex="0"><p class="ar--flex ar--flex-algn-cntr wrap">이 누리집은 대한민국 공식 전자정부 누리집입니다.</p></div>
+        <div class="header--nav wrap ar--flex ar--flex-algn-cntr">
+            <h1 class="logo"><a href="#" title="메인페이지 바로가기"></a></h1>
+            <!-- <h1 class="logo ar--flex ar--flex-algn-cntr"><a href="https://www.seoul.go.kr/main/index.jsp#n" title="메인페이지 바로가기"></a></h1> -->
+            <nav class="ar--flex ar--flex-jstf-sb">
+                <ul class="gnb ar--flex ar--flex-algn-cntr" role="menu">
+                    <li role="menuitem"><a href="javascript:void(0)">서울소식</a></li>
+                    <li role="menuitem"><a href="javascript:void(0)">시민참여</a></li>
+                    <li role="menuitem"><a href="javascript:void(0)">분야별정보</a></li>
+                    <li role="menuitem"><a href="javascript:void(0)">서울소개</a></li>
+                    <li role="menuitem"><a href="javascript:void(0)">부서안내</a></li>
+                    <li role="menuitem"><a href="javascript:void(0)">정보공개</a></li>
+                    <li role="menuitem"><a href="javascript:void(0)">응답소</a></li>
+                </ul>
+                <ul class="header--cust ar--flex ar--flex-algn-cntr">
+                    <li role="menuitem"><a href="javascript:void(0)">로그인</a></li>
+                    <li role="menuitem"><a href="javascript:void(0)">나의서울</a></li>
+                    <li role="menuitem"><a href="javascript:void(0)">전자우편</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header--btom wrap">
+            <div class="header--lang ar--flex ar--flex-jstf-end">
+                <label for="cityLang" class="ar--scr-only">언어 선택</label>
+                <select id="cityLang" class="ar--select">
+                    <option value="http://english.seoul.go.kr/?SSid=101_01">ENGLISH</option>
+                    <option value="http://japanese.seoul.go.kr/?SSid=101_02">日本語</option>
+                    <option value="http://chinese.seoul.go.kr/?SSid=101_04">简体中文</option>
+                    <option value="http://tchinese.seoul.go.kr/?SSid=101_03">繁体中文</option>
+                    <option value="http://world.seoul.go.kr/">WorldWide</option>
+                </select>
+                <input type="button" value="GO" title="서울시 다국어 홈페이지로 이동-새창">
+            </div>
+            <div class="header--srch ar--flex ar--flex-jstf-sb">
+                <h1 class="logo--new"><a href="javascript:void(0)"><span class="ar--scr-only">동행·매력 특별시 서울</span></a></h1>
+                <div class="srch">
+                    <form action="" class="ar--flex">
+                        <label for="inp_TopSearch" class="ar--scr-only">검색어를 입력해 주세요</label>
+                        <input type="text" id="inp_TopSearch" class="ar--input ar--size-std" placeholder="검색어를 입력해 주세요" title="검색어 입력">
+                        <img src="./assets/images/keyboard.png" alt="입력도구" class="keyboardInputInitiator" title="Display keyboard interface">
+                        <button class="ar--btn ar--size-std" tabindex="0"><span class="ar--scr-only">검색하기</span></button>
+                    </form>
+                </div>
+                <div class="weather ar--flex">
+                    <a href="https://www.weather.go.kr" target="_blank" title="기상청 날씨누리 사이트 바로가기" tabindex="0"><img src="/assets/images/weathericon_d6.png" alt="흐림"></a>
+                    <div class="weather--detail">
+                        <a href="https://www.weather.go.kr" target="_blank" title="기상청 날씨누리 사이트 바로가기" tabindex="0"><strong>7.3℃</strong><span>흐림</span></a>
+                        <a href="//cleanair.seoul.go.kr/main.htm#tab1_01" target="_blank" title="서울특별시 대기환경정보 사이트 바로가기" tabindex="0">미세먼지<em>(좋음)</em> 초미세 먼지<em>(좋음)</em></a>
+                    </div>
+                </div>
+                <a href="https://www.seoul.go.kr/newbrand/" target="_blank" title="서울 신규 브랜드 소개 페이지로 이동(새창)" tabindex="0"><img src="./assets/images/brand-seoulmysoul.png" alt="SEOUL MY SOUL"></a>
+            </div>
+        </div>
+    </header>
+     <!-- //hader -->
+
+    <!-- contents -->
+    <main>
+        <!-- 슬라이드 / 배너 영역 -->
+        <div class="visual wrap ar--flex ar--flex-jstf-cntr">
+            <div class="visual--slide ar--flex">
+                <!-- 탭 리스트 -->
+                <div class="tab--list" role="tablist" aria-label="슬라이드 메뉴">
+                    <button role="tab" id="tab1" class="active" aria-selected="true" aria-controls="panel1"><i></i>주요뉴스</button>
+                    <button role="tab" id="tab2" aria-selected="false" aria-controls="panel2"><i></i>시민참여</button>
+                </div>
+                
+                <!-- 탭 패널 -->
+                <div id="panel1" class="tab--cont active" role="tabpanel" tabindex="0" aria-labelledby="tab1">
+                    <!-- 주요뉴스 슬라이드 -->
+                    <div class="visual--slick slick--01">
+                        <div class="slick--page"></div>
+                        <div class="slick--page"></div>
+                        <div class="slick--page"></div>
+                    </div>
+                    <div class="slick--ctl slick--ctl--01 ar--flex ar--flex-jstf-sb">
+                        <p>dfdfakdfjkladjflkajdl</p>
+                        <div class="ar--flex ar--flex-algn-cntr">
+                            <span class="slick--ctl--page"><i>1</i>/10</span>
+                            <nav class="slick--ctl--nav ar--flex ar--flex-algn-cntr">
+                                <a class="slick-pause">멈춤</a>
+                                <a class="slick-play">재생</a>
+                            </nav>
+                            <button class="ar--btn ar--size-sm ar--flex ar--flex-algn-cntr">전체보기</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="panel2" class="tab--cont" role="tabpane2" tabindex="0" aria-labelledby="tab2">
+                    <!-- 시민참여 -->
+                    <div class="visual--slick slick--02">
+                        <div class="slick--page"></div>
+                        <div class="slick--page"></div>
+                    </div>
+                    <div class="slick--ctl slick--ctl--02 ar--flex ar--flex-jstf-sb">
+                        <p>2번째</p>
+                        <div class="ar--flex ar--flex-algn-cntr">
+                            <span class="slick--ctl--page"><i>1</i>/10</span>
+                            <nav class="slick--ctl--nav ar--flex ar--flex-algn-cntr">
+                                <a class="slick-pause">멈춤</a>
+                                <a class="slick-play">재생</a>
+                            </nav>
+                            <button class="ar--btn ar--size-sm">전체보기</button>
+                        </div>
+                    </div>
+                </div>
+                  
+            </div>
+            <section class="visual--bnr">
+                <div class="bnr--mayor-news">
+                    <h3 class="ar--scr-only">시장님 뉴스</h3>
+                    <a href="https://mayor.seoul.go.kr/oh/seoul/newsView.do?photoGallerySn=3541&curPage=" target="_blank"><span>서울 교통 통합브랜드 'GO SEOUL' 런칭</span></a>
+                </div>
+                <div class="bnr--online-mayor">
+                    <h3 class="ar--scr-only">온라인 시장실</h3>
+                    <a href="https://mayor.seoul.go.kr/" target="_blank"></a>
+                    <a href="https://eungdapso.seoul.go.kr/req/mayor_hope/mayor_hope.do" target="_blank">시장에게 바란다</a>
+                    <div class="bnr--online-mayor__group ar--flex">
+                        <a href="https://mayor.seoul.go.kr/oh/seoul/manifesto.do" class="ar--flex" target="_blank" title="온라인 시장실 홈페이지내 공약(매니페스토) 페이지로 이동(새창)">공약(매니페스토)</a>
+                        <a href="https://idea.seoul.go.kr/" class="ar--flex" target="_blank" title="상상대로 서울 홈페이지로 이동(새창)">정책제안</a>
+                        <a href="https://mvoting.seoul.go.kr/" class="ar--flex" target="_blank" title="엠보팅 홈페이지로 이동(새창)">투표표</a>
+                        <a href="https://research.seoul.go.kr/" class="ar--flex" target="_blank" title="온라인 여론조사 시스템 홈페이지로 이동(새창)">설문조사</a>
+                    </div>
+                </div>
+                <div class="ar--flex">
+                    <a href="http://pf.kakao.com/_WlXsV" target="_blank"><img src="/assets/images/btn-right-kakao-new.png" alt="서울시 카카오톡 채널 추가"></a>
+                    <a href="/seoul/smsAlarm/overView.do" target="_blank"><img src="/assets/images/btn-right-sms-new.png" alt="시정소식 문자알림서비스 신청/해지"></a>
+                </div>
+            </section>
+        </div>
+
+        <!-- 주요서비스 -->
+        <section class="service wrap">
+            <h2>주요 서비스</h2>
+            <hr>
+            <ul class="ar--flex ar--flex-jstf-sb">
+				<li class="service--reserve">
+					<a href="//yeyak.seoul.go.kr" target="_blank" title="새창"><i></i>공공서비스예약</a>
+				</li>
+				<li class="service--answer">
+					<a href="//eungdapso.seoul.go.kr" target="_blank" title="새창"><i></i>응답소(민원신고)</a>
+				</li>
+				<li class="service--job">
+					<a href="http://job.seoul.go.kr" target="_blank" title="새창"><i></i>서울일자리</a>
+				</li>
+				<li class="service--realestate">
+					<a href="https://land.seoul.go.kr:444/land/" target="_blank" title="새창"><i></i>부동산정보</a>
+				</li>
+				<li class="service--portal">
+					<a href="https://slearn.seoul.go.kr/" target="_blank" title="새창"><i></i>서울런</a>
+				</li>
+				<li class="service--welfare">
+					<a href="http://wis.seoul.go.kr"  target="_blank" title="새창"><i></i>서울복지포털</a>
+				</li>
+				<li class="service--house">
+					<a href="//housing.seoul.go.kr/" target="_blank" title="새창"><i></i>서울주거포털</a>
+				</li>
+				<li class="service--young">
+					<a href="https://youth.seoul.go.kr/" target="_blank" title="새창"><i></i>청년몽땅정보통</a>
+				</li>  
+				<li class="service--mediahub">
+					<a href="https://mediahub.seoul.go.kr/news/newsMain.do?utm_source=main_inner2&amp;utm_medium=icon&amp;utm_campaign=btn_asite" target="_blank" title="새창"><i></i>내 손안에 서울</a>
+				</li>				
+				<li class="service--democracy">
+					<a href="https://idea.seoul.go.kr/" target="_blank" title="새창"><i></i>상상대로 서울</a>
+				</li>
+				<li class="service--sll">
+					<a href="https://sll.seoul.go.kr/main/MainView.do" target="_blank" title="새창"><i></i>평생학습포털</a>
+				</li>
+				<li class="service--council">
+					<a href="http://www.smc.seoul.kr" target="_blank" title="새창"><i></i>시의회</a>
+				</li>
+			</ul>
+            <a href="//news.seoul.go.kr/gov/site?tr_code=service_site"  class="view-more" target="_blank" title="새창">전체누리집</a>
+        </section>
+
+        <!-- 사이드 배너 -->
+        <section class="side-bnr">
+            <ul class="wrap ar--flex">
+                <li><a href="https://www.seoul.go.kr/storyw/intro/list.do"><img src="/assets/images/bnr-01.jpg" alt="스토리인서울"></a></li>
+                <li><a href="https://festival.seoul.go.kr/"><img src="/assets/images/bnr-02.jpg" alt="페스티벌인서울"></a></li>
+                <li><a href="https://fsi.seoul.go.kr/front/index.do" target="_blank" title="새창열림"><img src="/assets/images/bnr-03.jpg" alt="서울 시민 안전을 위한 수산물 방사능 검사결과"></a></li>
+                <li><a href="https://www.gov.kr/portal/main" target="_blank" title="새창열림"><img src="/assets/images/bnr-04.jpg" alt="대한민국 정부 대표포털 정부24(민원)"></a></li>
+                <li><a href="https://minwon.seoul.go.kr/" target="_blank" title="새창열림"><img src="/assets/images/bnr-05.jpg" alt="민원발급서비스 서울시 온라인 민원"></a></li>
+          </ul>
+        </section>
+
+        <!-- 이벤트 신청, 이달의 행사 및 축제,자추 찾은 서비스 -->
+        <div class="community wrap ar--flex">
+            <section class="event">
+                <h2>이벤트 신청</h2>
+                <hr>
+                <ul>
+                    <li><b class="col-orange">복지</b><a href="#">2025년 서울특별시 어린이 및 청소년상 수상후보자 추천 모집</a></li>
+                    <li><b class="col-orange">주택</b><a href="#">'매력 도시, 사람을 위한 건축' 이벤트 (참여기간: 2025. 2. 20.~3. 9.)</a></li>
+                    <li><b class="col-violet">문화</b><a href="#">2025 감사의 정원 헌시 공모 (기간: 2. 10.~3. 7.)</a></li>
+                    <li><b class="col-blue">행정</b><a href="#">[모집] 서울 청년 기획봉사단 2기 모집(기간: 2025. 2. 26.~3. 19.)</a></li>
+                    <li><b class="col-red">주택</b><a href="#">2025 광화문광장 홍보 서포터즈 모집 (기간: ~ 3. 25. 21:00)</a></li>
+                </ul>
+                <a href="/eventreqst/list.do" class="view-more" target="_blank" title="새창열림"><span class="ar--scr-only">이벤트 신청 더보기</span></a>
+            </section>
+            <section class="festa">
+                <h2>이달의 행사 및 축제</h2>
+                <hr>
+                <ul>
+                    <li><b class="col-orange">문화</b><a href="#">2025. 3월 문화달력</a></li>
+                    <li><b class="col-violet">행정</b><a href="#">AI와 시민의 유쾌한 첫 만남…서울시, '서울 AI페스타' 개최 (2025. 3. 8.~9.)</a></li>
+                    <li><b class="col-green">경제</b><a href="#">4050세대 일자리 찾아드려요…서울시, 중장년 일자리 박람회 개최 (2025. 3. 6.)</a></li>
+                    <li><b class="col-orange">문화</b><a href="#">[서촌라운지] 박노을, 백인교 '빛나는 시작' 전시(1/14~3/23)</a></li>
+                    <li><b class="col-orange">문화</b><a href="#">[한성백제박물관] 국제교류전 <히타이트></a></li>
+                </ul>
+                <a href="/thismteventfstvl/list.do" class="view-more" target="_blank" title="새창열림"><span class="ar--scr-only">이달의 행사 및 축제 더보기</span></a>
+            </section>
+            <section class="quick">
+                <h2>자추 찾은 서비스</h2>
+                <ul>
+                    <li title="서울시ETAX"><a href="https://etax.seoul.go.kr" target="_blank">서울시ETAX</a></li>
+                    <li title="이달의 행사 및 축제"><a href="https://www.seoul.go.kr/thismteventfstvl/list.do" target="_blank">이달의 행사 및 축제</a></li>
+                    <li title="내손안에서울"><a href="https://mediahub.seoul.go.kr" target="_blank">내손안에서울</a></li>
+                    <li title="온라인시장실"><a href="http://mayor.seoul.go.kr" target="_blank">온라인시장실</a></li>
+                    <li title="기획행정소식"><a href="https://news.seoul.go.kr/gov/archives/category/admin-news_c1/news_admin-news-n1" target="_blank">기획행정소식</a></li><li title="공공서비스예약"><a href="https://yeyak.seoul.go.kr" target="_blank">공공서비스예약</a></li>
+                    <li title="인재개발원"><a href="https://hrd.seoul.go.kr" target="_blank">인재개발원</a></li>
+                    <li title="평생학습포털"><a href="https://sll.seoul.go.kr" target="_blank">평생학습포털</a></li>
+                    <li title="서울일자리포털"><a href="https://job.seoul.go.kr" target="_blank">서울일자리포털</a></li><li title="에코마일리지"><a href="https://ecomileage.seoul.go.kr" target="_blank">에코마일리지</a></li></ul>
+            </section>
+        </div>
+        <hr class="wrap bold">
+
+        <!-- 분야별정보 -->
+        <section class="sector-info wrap">
+            <h2>분야별정보</h2>
+            <ul class="ar--flex">
+                <li><a href="#"><i></i>주택</a></li>
+                <li><a href="#"><i></i>경제</a></li>
+                <li><a href="#"><i></i>교통</a></li>
+                <li><a href="#"><i></i>환경</a></li>
+                <li><a href="#"><i></i>복지</a></li>
+                <li><a href="#"><i></i>안전</a></li>
+                <li><a href="#"><i></i>문화</a></li>
+                <li><a href="#"><i></i>행정</a></li>
+            </ul>
+        </section>
+
+        <!-- 새소식 -->
+        <div class="news wrap ar--flex">
+            <section>
+                <h3 class="bg--col-orange">복지</h3>
+                <a href="https://news.seoul.go.kr/welfare/archives/557457">
+                    <div><img src="/assets/images/655ea97bcfdef9.06567692.jpg" alt></div>
+                    <p>야간, 휴일에도 진료하는 병원을 찾고 있다면? 우리아이 안심 의료기관을 이용해 보세요</p>
+                </a>
+            </section>
+            <section>
+                <h3 class="bg--col-green">환경</h3>
+                <a href="https://news.seoul.go.kr/env/archives/562201">
+                    <div><img src="/assets/images/67bfea6e29a359.51383785.jpg" alt></div>
+                    <p>공동주택 전기안전 지원사업 추진…정전 걱정 줄인다!</p>
+                </a>
+            </section>
+            <section>
+                <h3 class="bg--col-orange">복지</h3>
+                <a href="https://news.seoul.go.kr/env/archives/562201">
+                    <div><img src="/assets/images/67b6924412d603.27183301.jpg" alt></div>
+                    <p>새학기 달라지는 우리동네키움센터…아침돌봄 전 자치구 확대되고, 이용자 편의 제고</p>
+                </a>
+            </section>
+            <section>
+                <h3 class="bg--col-green">환경</h3>
+                <a href="https://news.seoul.go.kr/env/archives/562201">
+                    <div><img src="/assets/images/67bfe766d48799.29856794.jpg" alt></div>
+                    <p>‘우리동네 동물병원’에서 취약계층 반려동물 의료지원 해드려요</p>
+                </a>
+            </section>
+            <section>
+                <h3 class="bg--col-orange">복지</h3>
+                <a href="https://news.seoul.go.kr/env/archives/562201">
+                    <div><img src="/assets/images/67c14df8c3f990.56333320.jpg" alt></div>
+                    <p>‘서울시 병원안심동행’ 만족도 93%…주2회→월10회로 업그레이드</p>
+                </a>
+            </section>
+            <section>
+                <h3 class="bg--col-blue">교통</h3>
+                <a href="https://news.seoul.go.kr/env/archives/562201">
+                    <div><img src="/assets/images/traffic_news0306.jpg" alt></div>
+                    <p>운전면허 반납 어르신 지원 확대… 반납 시 20만원 교통카드</p>
+                </a>
+            </section>
+            <section>
+                <h3 class="bg--col-blue">행정</h3>
+                <a href="https://news.seoul.go.kr/env/archives/562201">
+                    <div><img src="/assets/images/67af00f803ac81.92155035.jpg" alt></div>
+                    <p>서울시 사칭 메일에 속지 마세요</p>
+                </a>
+            </section>
+            <section>
+                <h3 class="ar--scr-only">특별기획</h3>
+                <a href="https://news.seoul.go.kr/env/archives/562201">
+                    <div><img src="/assets/images/SPC_20240529145612_71521.jpg" alt="서울의 모든 혜택 내 손안에 서울 구독하기"></div>
+                </a>
+            </section>
+        </div>
+
+        <!-- 서울 영상/ 서울 소식 / 서울 녹서 -->
+        <div class="movie wrap ar--flex">
+            <section>
+                <h2>서울영상</h2>
+                <a href="https://www.youtube.com/watch?v=BFmlAsNRJeU&t=1s">
+                    <div><img src="./assets/images/USFUL_20250304142326_09839.jpg" alt=""></div>
+                    <span class="ar--caption">[4K Drone] 서울을 가로지르는 한강버스 여정의 시작 [전지적 서울시점 시즌8]</span>
+                </a>
+            </section>
+            <section>
+                <h2>서울소식</h2>
+                <ul>
+                    <li><a href="#"><b class="col-green">고시공고</b></a><a href="#">2025년 제17회 서울자전거대행진 수행기관 선정결과 공고</a></li>
+                    <li><a href="#"><b class="col-green">입찰공고</b></a><a href="#">기술용역 참여기술인 업무중복도 공개(현대화사업 타당성조사 및 기본계획 수립 용역)</a></li>
+                    <li><a href="#"><b class="col-green">채용시험</b></a><a href="#">2025년 서울역사박물관 자원봉사자 모집 공고</a></li>
+                    <li><a href="#"><b class="col-green">보도자료</b></a><a href="#">서울시, 신성장산업 R&D 투자 확대… 글로벌 AI 혁신도시로 거듭난다</a></li>
+                </ul>
+            </section>
+            <section>
+                <h2>서울녹서</h2>
+                <a href="https://www.youtube.com/watch?v=BFmlAsNRJeU&t=1s">
+                    <div><img src="./assets/images/USFUL_20250304160330_39042.jpg" alt=""></div>
+                    <span class="ar--caption">잼버리 붕괴 직전?! 서울시가 만든 기적의 7일[서울녹서]</span>
+                </a>
+            </section>
+        </div>
+
+        <!-- sns 배너 -->
+        <section class="sns wrap ar--flex ar--flex-algn-cntr ar--flex-jstf-sb">
+            <div class="ar--flex ar--flex-algn-cntr">
+                <h3>서울시 SNS</h3>
+                <span>서울시 소통창구를 한눈에!</span>
+                <a href="#" class="ar--flex ar--flex-algn-cntr" target="_blank" title="새창열림">전체보기</a>
+            </div>
+            <ul class="ar--flex">
+                <li><a href="#" class="sns--facebook" title="새창열림"><span class="ar--scr-only">페이스북</span></a></li>
+                <li><a href="#" class="sns--" title="새창열림"><span class="ar--scr-only">인스타</span></a></li>
+                <li><a href="#" class="sns--" title="새창열림"><span class="ar--scr-only">유투브</span></a></li>
+                <li><a href="#" class="sns--" title="새창열림"><span class="ar--scr-only">엑스</span></a></li>
+                <li><a href="#" class="sns--" title="새창열림"><span class="ar--scr-only">블로그</span></a></li>
+                <li><a href="#" class="sns--" title="새창열림"><span class="ar--scr-only">카카오 스토리</span></a></li>
+                <li><a href="#" class="sns--" title="새창열림"><span class="ar--scr-only">카카오톡</span></a></li>
+            </ul>
+        </section>
+        <hr class="wrap bold">
+    </main> 
+    <!-- //contents -->
+
+    <!-- 제이쿼리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- 슬릭 -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+
+        // 탭메뉴
+        const tabBtn = document.querySelectorAll('.tab--list button'),
+              tabCont = document.querySelectorAll('.tab--cont');
+
+        tabBtn.forEach((btn, index) => {
+            btn.addEventListener('click', () => {
+                const num = index + 1;
+                
+                document.querySelector('.tab--list .active')?.classList.remove('active');
+                document.querySelector('.tab--cont.active')?.classList.remove('active');
+
+                btn.classList.add('active');
+                document.getElementById(`panel${num}`)?.classList.add('active');
+            });
+        });
+
+
+        //슬릭
+
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabs = document.querySelectorAll("[role='tab']");
+            const panels = document.querySelectorAll("[role='tabpanel']");
+            const slideControls = document.querySelectorAll(".slick--ctl--nav button");
+
+            let activeTab = 0;
+            let activeControlIndex = 0;
+
+            // 탭 활성화 함수
+            // function activateTab(index) {
+            //     tabs.forEach((tab, i) => {
+            //         tab.classList.toggle("active", i === index);
+            //         tab.setAttribute("aria-selected", i === index ? "true" : "false");
+            //     });
+            //     panels.forEach((panel, i) => {
+            //         panel.classList.toggle("active", i === index);
+            //     });
+
+            //     activeTab = index;
+            //     panels[index].focus();
+            // }
+
+            // 키보드 포커스 이동 (탭 키)
+            document.addEventListener("keydown", function (event) {
+                const isLastSlide = activeControlIndex === slideControls.length - 1;
+
+                if (event.key === "Tab") {
+                    console.log('dd');
+                    if (isLastSlide) {
+                        if (activeTab === 0) {
+                            activateTab(1); // 시민참여 탭으로 이동
+                        } else {
+                            activateTab(0); // 주요뉴스 탭으로 이동
+                        }
+                        activeControlIndex = 0;
+                        event.preventDefault();
+                    } else {
+                        slideControls[activeControlIndex].focus();
+                        activeControlIndex++;
+                        event.preventDefault();
+                    }
+                }
+            });
+
+            // 슬라이드 컨트롤 포커스 순환
+            slideControls.forEach((control, index) => {
+                control.addEventListener("focus", function () {
+                    activeControlIndex = index;
+                });
+            });
+
+
+
+            // Slick 슬라이더 초기화
+            let $slider01 = $('.slick--01');
+            let $slider02 = $('.slick--02');
+
+            $('.slick--01').slick({
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                autoplay: true,
+                appendArrows : $('.slick--ctl--01 .slick--ctl--nav'),
+                nextArrow: '<a class="slick-next" href="#">다음</a>',
+                prevArrow: '<a class="slick-prev" href="#">이전</a>',
+        
+            });
+            $('.slick--02').slick({
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                autoplay: true,
+                appendArrows : $('.slick--ctl--02 .slick--ctl--nav'),
+                nextArrow: '<a class="slick-next" href="#">다음</a>',
+                prevArrow: '<a class="slick-prev" href="#">이전</a>',
+        
+            });
+
+            // 일시정지 버튼 기능
+            $('.slick-pause').on('click', function () {// 슬라이드 멈춤
+                $slider01.slick('slickPause'); 
+                $slider02.slick('slickPause'); 
+            });
+
+            // 재생 버튼 기능
+            $('.slick-play').on('click', function () {// 슬라이드 다시 재생
+                $slider01.slick('slickPlay'); 
+                $slider02.slick('slickPlay'); 
+            });
+        });
+    </script>
+</body>
+</html>

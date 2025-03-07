@@ -1,0 +1,730 @@
+@import "_reset";
+@import "_component";
+
+.wrap {
+    width: 100%;
+    max-width: 72rem;
+    margin: 0 auto;
+}
+.logo {
+    & > a {
+        display: inline-block;
+        width: 105px;
+        height: 27px;
+        background: url('../../assets/images/icon_set_common.png') no-repeat -4.96px -167px;
+    }
+    &--new {
+        a {
+            display: block;
+            width: 133px;
+            height: 51px;
+            background: url('../../assets/images/bg_logo.png');
+            @include bg-contain;
+        }
+    }
+}
+//header
+header {
+    margin-bottom: 30px;
+   .header--top {
+    width: 100%;
+    background-color: #EDF1F5;
+    p {
+        padding: .375rem 0;
+        color: #1D1D1D;
+        font-size: .8125rem;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 1.5rem;
+            height: 1rem;
+            background-image: url('../../assets/images/top-flag.svg');
+            @include bg-contain;
+        }
+    }
+   }
+   .header--nav {
+    & > nav {
+        width: calc(100% - 6.5625rem - 1.88rem);
+        margin-left: 1.88rem;
+        & > ul > li {
+            margin-left: 1.25rem;
+            & > a {
+                display: inline-block;
+                height: 3rem;
+                font-size: 1rem;
+                line-height: 3rem;
+                font-weight: 700;
+            }
+        }
+    }
+   } 
+   .header--lang {
+    margin-bottom: 1.25rem;
+    select, input {
+        height: 1.3125rem;
+    }
+    select {
+        width: 5rem;
+    }
+   }
+   .header--srch {
+    .srch {
+        position: relative;
+        width: 520px;
+        height: 42px;
+        border: 3px solid #2292e9;
+        margin-top: 0;
+        box-sizing: border-box;
+        input {
+            width: calc(100% - 36px);
+        }
+        img {
+            position: absolute;
+            top: 50%;
+            right: calc(36px + 10px);
+            transform: translateY(-50%);
+        }
+        button {
+            display: inline-block;
+            width: 36px;
+            background: url("/assets/images/icon_set_common.png") no-repeat -32px -97px;
+        }
+
+    }
+    .weather {
+        a {
+            display: block;
+            &:nth-child(2) {
+                margin-top: 7px;
+            }
+        }
+        strong {
+            margin-right: 0.31rem;
+            font-size: 1.56rem;
+            font-weight: 700;
+        }
+        span {
+            letter-spacing: -0.1em;
+        }
+        em {
+            color: $colr-main;
+        }
+    }
+   }
+}
+main { //공통코드
+    h2 {
+        display: inline-block;
+        padding-bottom: 10px;
+        font-size: 24px;     
+        font-weight: 700; 
+    }
+    hr {
+        margin: 0 0 20px;
+        border-bottom: 1px solid #dbdbdb;
+        &.bold {
+            border-bottom: 2px solid #222;
+        }
+    }
+    .view-more {
+        position: absolute;
+        right: 0;
+        display: inline-block;
+        border: 1px solid #ddd;
+        text-align: center;
+    }
+    .ar--caption {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .5);
+        color: #fff;
+        padding: 11px 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+.tab {
+    &--list {
+        button {
+            display: block;
+            width: 80px;
+            height: 175px;
+            background-color: #d2e1e9;
+            color: #333;
+            font-weight: 700;
+            &.active {
+                background-color: #0158a8;
+                color: #fff;
+            }
+            &:first-child i {
+                background-position: 0 0;
+            }
+            &:last-child i {
+                background-position: -48px 0;
+            }
+        }
+        i {
+            display: block;
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 10px;
+            background-color: #fff;
+            background-image: url('../../assets/images/icon_main_2019.png');
+            border-radius: 50%;
+        }
+    }
+    &--cont {
+        position: relative;
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+}
+.visual {
+    gap: 20px;
+    &--slick {
+        width: 690px;
+        font-size: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        .slick--page {
+            display: inline-block;
+            width: 100%;
+            height: 350px;
+            @include bg-cover;
+            font-size: 1rem;
+        }
+        &.slick--01 {
+            .slick--page:nth-child(1) {
+                background-image: url("../../assets/images/slide-01_01.jpg");
+            }
+            .slick--page:nth-child(2) {
+                background-image: url("../../assets/images/slide-01_02.jpg");
+            }
+            .slick--page:nth-child(3) {
+                background-image: url("../../assets/images/slide-01_03.jpg");
+            }
+        }
+        &.slick--02 {
+            .slick--page:nth-child(1) {
+                background-image: url("../../assets/images/slide-02_01.jpg");
+            }
+            .slick--page:nth-child(2) {
+                background-image: url("../../assets/images/slide-02_02.jpg");
+            }
+        }
+    }
+    .slick--ctl {
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 10px;
+        background-color: rgba(0, 0, 0, .7);
+        color: #fff;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        box-sizing: border-box;
+        &, div, p, span, nav, a, i, button {
+            color: #fff;
+            font-weight: 300;
+            font-size: 13px;
+            letter-spacing: 0;
+        }
+        & > div {
+            gap: 16px;
+        }
+        &--nav {
+            width: 80px;
+            height: 30px;
+            a {
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                background-image: url("../../assets/images/icon_set_common.png");
+                filter: invert(100);
+                text-indent: -9999px;
+                cursor: pointer;
+            }
+            .slick-prev {
+                background-position: -344px -42px;
+            }
+            .slick-next {
+                background-position: -387px -43px;
+            }
+            .slick-pause {
+                background-position: -366px -43px;
+            }
+            .slick-play {
+                background-position: -401px -43px;
+            }
+        }
+        p {
+            font-size: 14px;
+        }
+        button {
+            height: 100%;
+            line-height: 0;
+            border-radius: 0;
+            background: #000;
+            &::before {
+                content: '';
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                margin-right: 6px;
+                margin-bottom: -2px;
+                background: url("../../assets/images/bannerAll-ico.png") no-repeat 0 0;
+            }
+        }
+    }
+    &--bnr {
+        width: 360px;
+        & > div {
+            position: relative;
+        }
+        & > div:nth-child(1) {
+            height: 190px;
+            margin-bottom: 10px;
+        }
+        & > div:nth-child(2) {
+            height: 90px;
+            margin-bottom: 10px;
+        }
+        & > div:nth-child(3) {
+            height: 50px;
+            gap: 10px;
+        }
+        & > div a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            @include bg-cover;
+        }
+        & > div > a > span,
+        & > div > span,
+        & > div > div {
+            position: absolute;
+            display: inline-block;
+        }
+        & .bnr--mayor-news {
+            a {
+                background-image: url('../../assets/images/MAYORNEWS_20250224165813_84065.jpg');
+            }
+            span {
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                padding: 0 10px;
+                background: rgba(0, 0, 0, .7);
+                color: #fff;
+                font-weight: 700;
+                text-align: center;
+                overflow: hidden;
+            }
+        }
+        & .bnr--online-mayor {
+            & a {
+                font-size: 10px;
+                text-align: center;
+                background-color: #856949;
+                color: #fff;
+            }
+            & > a:nth-of-type(1) {
+                background-image: url('../../assets/images/img-mayor-intro.png');
+            }
+            & > a:nth-of-type(2) {
+                position: absolute;
+                top: 34px;
+                right: 10px;
+                transform: translateY(-50%);
+                width: 110px;
+                height: 30px;
+                line-height: 30px;
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                    background-image: url(../../assets/images/icon_set_common.png);
+                    filter: invert(100);
+                    background-position: -387px -39px;
+                }
+            }
+            & > div {
+                bottom: 0;
+                right: 0;
+                display: flex;
+                width: 100%;
+                gap: 1px;
+                a {
+                    padding: 4px 0;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+.service {
+    position: relative;
+    margin-top: 50px;
+    & .view-more {
+        top: -4px;
+        left: 140px;
+        right: auto;
+        width: 112px;
+        height: 29px;
+        margin-left: 20px;
+        line-height: 29px;
+        &::after {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            margin-left: 6px;
+            background: url("../../assets/images/icon_set_common.png");
+            background-position: -387px -46px;
+        }
+    }
+    ul {
+        a {
+            display: inline-block;
+            width: auto;
+            height: 90px;
+            text-align: center;
+            letter-spacing: -0.7px;
+        }
+        i {
+            display: block;
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 10px;
+            background-image: url('../images/icon_set_service_202403.png');
+        }
+    }
+    &--answer i{
+        background-position: -62px 0;
+    }
+    &--job i {
+        background-position: calc(-61px * 2) 0;
+    }
+    &--realestate i {
+         background-position: calc(-60px * 3) 0;
+    }
+    &--portal i {
+         background-position: calc(-60px * 4) 0;
+    }
+    &--welfare i {
+         background-position: calc(-60px * 5) 0;
+    }
+    &--house i {
+         background-position: calc(-60px * 6) 0;
+    }
+    &--young i {
+         background-position: calc(-60px * 7) 0;
+    }
+    &--mediahub i {
+         background-position: calc(-60px * 8) 0;
+    }
+    &--democracy i {
+         background-position: calc(-60px * 9) 0;
+    }
+    &--sll i {
+         background-position: calc(-60px * 11) 0;
+    }
+    &--council i {
+        background-position: calc(-60px * 10) 0;
+    }
+}
+.side-bnr {
+    margin-top: 35px;
+    background: #eff4f8;
+    li {
+        padding: 20px 0;
+    }
+}
+.community {
+    gap: 36px;
+    padding: 50px 0 50px;
+    & > section {
+        position: relative;
+        width: 360px;
+        
+        & > .view-more {
+            top: 4px;
+            width: 22px;
+            height: 20px;
+            border: 1px solid #ddd;
+            background: url('../images/icon_set_common.png') no-repeat -1px -1px;
+        }
+    }
+    & > section > ul {
+        li {
+            width: 100%;
+            padding: 6px 0 6px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        b {
+            margin: 0 9px 0 0;
+            font-size: 15px;
+        }
+        a {
+            font-size: 15px;
+        }
+    }
+    .quick{
+        ul {
+            background: #eff4f8;
+            font-size: 0;
+            li {
+                display: inline-block;
+                width: 50%;
+                &::before {
+                    content: '';
+                    transform: translateY(-5px);
+                    display: inline-block;
+                    background: #666666;
+                    width: 2px;
+                    height: 2px;
+                    vertical-align: middle;
+                    margin-right: 8px;
+                }
+            }
+        }
+    }
+}
+.sector-info {
+    padding-top: 40px;
+    ul {
+        gap: 59px;
+        li { 
+            &:nth-child(1) a i {
+                background-image: url('../images/icon_house.png');
+            }
+            &:nth-child(2) a i {
+                background-image: url('../images/icon_economy.png');
+            }
+            &:nth-child(3) a i {
+                background-image: url('../images/icon_traffic.png');
+            }
+            &:nth-child(4) a i {
+                background-image: url('../images/icon_environment.png');
+            }
+            &:nth-child(5) a i {
+                background-image: url('../images/icon_welfare.png');
+            }
+            &:nth-child(6) a i {
+                background-image: url('../images/icon_safty.png');
+            }
+            &:nth-child(7) a i {
+                background-image: url('../images/icon_culture.png');
+            }
+            &:nth-child(8) a i {
+                background-image: url('../images/icon_work.png');
+            }
+        }
+        a {
+            display: inline-block;
+            width: 85px;
+            height: 145px;
+            text-align: center;
+            font-size: 16px;
+        }
+        i {
+            display: inline-block;
+            width: 100%;
+            height: 80%;
+            @include bg-contain;
+        }
+    }
+}
+.news {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0 30px;
+    section {
+        position: relative;
+        width: calc((100% - 60px) / 4);
+        &:last-child {
+            & > a > div {
+                height: 250px;
+            }
+        }
+        & > a {
+            display: inline-block;
+            &:hover img,
+            &:focus-visible img {
+                transform: scale(1.1);
+            }
+
+        & > div {
+            width: 100%;
+            height: 188px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        }
+        h3 {
+            position: absolute;
+            top: 156px;
+            z-index: 1;
+            width: 82px;
+            height: 32px;
+            color: #fff;
+            text-align: center;
+            line-height: 32px;
+        }
+        img {
+            width: auto;
+            min-width: 273px;
+            height: 100%;
+            transform: scale(1.0);
+            transition: transform 0.3s ease-in-out;
+        }
+        p {
+            width: 100%;
+            height: 3em;
+            line-height: 1.5em;
+            margin-bottom: 20px;
+            overflow: hidden;
+            color: #222;
+            font-size: 16px;
+            text-overflow: ellipsis;
+            white-space: normal;
+            word-wrap: normal;
+            word-break: keep-all;
+        }
+    }
+}
+.movie {
+    gap: 20px;
+    padding-bottom: 50px;
+    section {
+        &:nth-child(2) {
+            width: calc(100% - 40px - 280px * 2);
+        }
+        & > a {
+            position: relative;
+            display: block;
+            &:hover img,
+            &:focus-visible img {
+                transform: scale(1.1);
+            }
+            & > div {
+                width: 280px;
+                height: 152px;
+                overflow: hidden;
+                & > img {
+                    transform: scale(1.0);
+                    transition: transform 0.3s ease-in-out;
+                }
+            }
+            & > .ar--caption {
+                bottom: 0;
+                font-weight: 700;
+            }
+        }
+        & > ul > li {
+            width: 100%;
+            padding: 6px 0 6px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            b {
+                margin-right: 18px;
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+.sns {
+    padding: 20px 55px 20px 40px;
+    margin-bottom: 50px;
+    background: #f7f6f3;
+    & >  div {
+        gap: 10px;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background: url('../images/ico-sns-title.png');
+            @include bg-contain;
+        }
+        & > a {
+            margin-top: 3px;
+            padding: 5px 15px;
+            color: #fff;
+            background: #867e68;
+            border-radius: 15px;
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                margin-left: 6px;
+                background: url(../images/icon_set_common.png) no-repeat -5px -5px;
+                filter: invert(100);
+            }
+        }
+    }
+    h3 {
+        font-size: 24px;
+        font-weight: 700;
+    }
+    span {
+        color: #666;
+        font-size: 18px;
+    }
+    & > ul {
+        gap: 25px;
+        & li {
+            &:nth-child(2) a {
+               background-position: -50px 0; 
+            }
+            &:nth-child(3) a {
+                background-position: -(calc(50px * 2)) 0; 
+            }
+            &:nth-child(4) a {
+                background-position: -(calc(50px * 3)) 0; 
+            }
+            &:nth-child(5) a { 
+                background-position: -(calc(50px * 4)) 0; 
+            }
+            &:nth-child(6) a {
+                background-position: -(calc(50px * 5)) 0; 
+            }
+            &:nth-child(7) a {
+                background-position: -(calc(50px * 6)) 0; 
+            }
+            a {
+                display: block;
+                width: 50px;
+                height: 50px;
+                background-image: url('../images/ico-sns-2025.png');
+            }
+        }
+    }
+}
+
+
+
+
+
+

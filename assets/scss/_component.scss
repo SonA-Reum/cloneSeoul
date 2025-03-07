@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+//색상
+$colr-black: #222;
+$colr-main :#0D6EFD;
+
+.col-orange {color: #d76000;}
+.col-violet {color: #9b64d3;}
+.col-blue {color: #028ab6;}
+.col-red {color: #c35c3c;}
+.col-green {color: #069363;}
+
+.bg {
+    &--col-orange {background-color: #d76000;}
+    &--col-violet {background-color: #9b64d3;}
+    &--col-blue {background-color: #028ab6;}
+    &--col-red {background-color: #c35c3c;}
+    &--col-green {background-color: #069363;}
+}
+
+
+@mixin bg-contain {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+@mixin bg-cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.ar {
+    &--flex {
+        display: flex;
+        &-algn {
+            &-cntr {
+                align-items: center;
+            }
+            &-end {
+                align-items: end;
+            }
+        }
+        &-jstf {
+            &-cntr {
+                justify-content: center;
+            }
+            &-end {
+                justify-content: flex-end;
+            }
+            &-sb {
+                justify-content: space-between;
+            }
+            &-sa {
+                justify-content: space-around;
+            }
+        }
+    }
+    &--btn {
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 8px;
+        font-size: 1rem;
+        text-align: center;
+        border-radius: .5rem;
+        cursor: pointer;
+        & > * {
+            color: #fff;
+        }
+        &:hover {
+        }
+        &-bg-non {
+            padding: 0;
+            background: none !important;
+            color: $colr-black;
+            & > * {
+                color: $colr-black;
+            }
+            &:hover,
+            &:active {
+                background: none !important;
+            }
+            &:hover{
+                //color: $colr-black-60;
+                & i {
+                    //color: $colr-black-60;
+                }
+            }
+            &:active {
+                color: $colr-black;
+                font-weight: 700;
+                & i {
+                    color: $colr-black;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    &--icon {
+        display: inline-block;
+        vertical-align: middle;
+        font: normal normal normal 1.5rem / 1 "FontAwesome";
+        text-rendering: geometricPrecision;
+    }
+    &--scr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+    &--select {
+        border: 1px solid #afcfea;
+        color: #1E6CB3;
+        font-size: 0.75rem;
+        padding: 0 0 0 0.13rem;
+        box-sizing: border-box;
+        line-height: 1.31rem;
+        background: url(../../images/bg_select_arrow_m.png) no-repeat no-repeat 96% center;
+        background-size: 8px auto;
+        & + input[type = "button"] {
+            display: inline-block;
+            width: 30px;
+            padding: 0;
+            border: 0;
+            color: #fff;
+            background-color: #1E6CB3;
+            font-size: 11px;
+        }
+    }
+    &--input {
+        border: 0;
+        padding: 0 0.63rem;
+    }
+
+    /* 인풋, 버튼 크기 */ 
+    &--size-sm {
+        height: 2rem;
+        line-height: 2rem;
+    }
+    &--size-std {
+        height: 2.25rem;
+        line-height: 2.25rem;
+    }
+    &--size-lg {
+        height: 3.125rem;
+        line-height: 3.125rem;
+        &.ar--btn-icon i {
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+    }
+}
+
