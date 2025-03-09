@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>작업중 서울특별시 - 동행·매력 특별시 서울</title>
+    <title>클론코딩 서울특별시 - 동행·매력 특별시 서울</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
@@ -15,8 +15,8 @@
 </style>
     <!-- hader -->
     <header>
-        <!-- <div class="header--top" tabindex="0"><p class="ar--flex ar--flex-algn-cntr wrap">이 누리집은 대한민국 공식 전자정부 누리집입니다.</p></div> -->
-        <!-- <div class="header--nav wrap ar--flex ar--flex-algn-cntr">
+        <div class="header--top" tabindex="0"><p class="ar--flex ar--flex-algn-cntr wrap">이 누리집은 대한민국 공식 전자정부 누리집입니다.</p></div>
+        <div class="header--nav wrap ar--flex ar--flex-algn-cntr">
             <h1 class="logo"><a href="#" title="메인페이지 바로가기"></a></h1>
             <nav class="ar--flex ar--flex-jstf-sb">
                 <ul class="gnb ar--flex ar--flex-algn-cntr" role="menu">
@@ -34,7 +34,7 @@
                     <li role="menuitem"><a href="javascript:void(0)">전자우편</a></li>
                 </ul>
             </nav>
-        </div> -->
+        </div>
         <div class="header--btom wrap">
             <!-- <div class="header--lang ar--flex ar--flex-jstf-end">
                 <label for="cityLang" class="ar--scr-only">언어 선택</label>
@@ -80,12 +80,19 @@
                     <button class="slide--sel-btn active"><i></i>주요뉴스</button>
                     <div>
                         <ul class="slide slide--01">
-                            <li class="slide--page"><a href="#"></a></li>
-                            <li class="slide--page"><a href="#"></a></li>
-                            <li class="slide--page"><a href="#"></a></li>
+                            <li class="slide--page">
+                                <a href="#"><img src="./assets/images/slide-01_01.jpg" alt="서울이 만든 친환경 교통혁신 '기후동행카드'의 A to Z"></a>
+                                <p>서울이 만든 친환경 교통혁신 '기후동행카드'의 A to Z"</p>
+                            </li>
+                            <li class="slide--page">
+                                <a href="#"><img src="./assets/images/slide-01_02.jpg" alt="서울시 병원안심동행. 혼자 병원가기 힘들 때 병원안심동행 이용하세요!"></a>
+                                <p>서울시 병원안심동행. 혼자 병원가기 힘들 때 병원안심동행 이용하세요!</p>
+                            </li>
+                            <li class="slide--page"><a href="#"><img src="./assets/images/slide-01_03.jpg" alt="서울시민 누구나! '시민안전보험' 최대 2천만원 보장"></a>
+                                <p>서울시민 누구나! '시민안전보험' 최대 2천만원 보장</p>
+                            </li>
                         </ul>
-                        <div class="slide--ctl ar--flex ar--flex-algn-cntr ar--flex-jstf-sb">
-                            <p>첫번쨰</p>
+                        <div class="slide--ctl ar--flex ar--flex-algn-cntr ar--flex-jstf-end">
                             <div class="ar--flex ar--flex-algn-cntr">
                                 <span class="slide--ctl--page"><i>1</i>/10</span>
                                 <nav class="slide--ctl--nav ar--flex ar--flex-algn-cntr">
@@ -103,11 +110,14 @@
                     <button class="slide--sel-btn"><i></i>시민참여</button>
                     <div>
                         <ul class="slide slide--02">
-                            <li class="slide--page"><a href="#"></a></li>   
-                            <li class="slide--page"><a href="#"></a></li>
+                            <li class="slide--page"><a href="#"><img src="./assets/images/slide-02_01.jpg" alt="2026년 예산편성을 위한 시민참여예산 제안사업 공모"></a>
+                                <p>2026년 예산편성을 위한 시민참여예산 제안사업 공모</p>
+                            </li>   
+                            <li class="slide--page"><a href="#"><img src="./assets/images/slide-02_02.jpg" alt="2025 광화문광장 서포터즈 모집"></a>
+                                <p>2025 광화문광장 서포터즈 모집</p>
+                            </li>
                         </ul>
-                        <div class="slide--ctl ar--flex ar--flex-algn-cntr ar--flex-jstf-sb">
-                            <p>두번째</p>
+                        <div class="slide--ctl ar--flex ar--flex-algn-cntr ar--flex-jstf-end">
                             <div class="ar--flex ar--flex-algn-cntr">
                                 <span class="slide--ctl--page"><i>1</i>/10</span>
                                 <nav class="slide--ctl--nav ar--flex ar--flex-algn-cntr">
@@ -359,7 +369,283 @@
             </ul>
         </section>
         <hr class="wrap bold">
-    </main> 
+
+        <!-- 직속기관, 사업소 -->
+        <section class="related-site wrap">
+            <h2 class="ar--scr-only">관련 사이트</h2>
+            <ul class="ar--flex">
+                <li class="related-site__unit">
+                    <button class="related-site--btn">
+                        <span>직속기관·사업소</span><em class="ar--scr-only">펼치기</em>
+                    </button>
+                    <div class="related-site__group">
+                        <h3 class="ar--scr-only">직속기관·사업소</h3>
+                        <ul class="ar--flex">
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식물원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식물원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식물원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식물원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="related-site__unit">
+                    <button class="related-site--btn">
+                        <span>공사·출연기관</span><em class="ar--scr-only">펼치기</em>
+                    </button>
+                    <div class="related-site__group">
+                        <h3 class="ar--scr-only">공사·출연기관</h3>
+                        <ul class="ar--flex">
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합방재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식뭘원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합방재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식뭘원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합방재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식뭘원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합방재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식뭘원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="related-site__unit">
+                    <button class="related-site--btn">
+                        <span>자치구</span><em class="ar--scr-only">펼치기</em>
+                    </button>
+                    <div class="related-site__group">
+                        <h3 class="ar--scr-only">자치구</h3>
+                        <ul class="ar--flex">
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식물원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식물원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식물원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식물원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="related-site__unit">
+                    <button class="related-site--btn">
+                        <span>중앙행정기관</span><em class="ar--scr-only">펼치기</em>
+                    </button>
+                    <div class="related-site__group">
+                        <h3 class="ar--scr-only">중앙행정기관</h3>
+                        <ul class="ar--flex">
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식물원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식물원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식물원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식물원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="related-site__unit">
+                    <button class="related-site--btn">
+                        <span>지방자치단체</span><em class="ar--scr-only">펼치기</em>
+                    </button>
+                    <div class="related-site__group">
+                        <h3 class="ar--scr-only">지방자치단체</h3>
+                        <ul class="ar--flex">
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합방재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식뭘원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합방재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식뭘원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합방재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식뭘원</a></li>
+                            <li><a href="#" target="_blank">시민안전체험관</a></li>
+
+                            <li><a href="#" target="_blank">서울시립대학교</a></li>
+                            <li><a href="#" target="_blank">서울종합방재센터</a></li>
+                            <li><a href="#" target="_blank">서울아리수본부</a></li>
+                            <li><a href="#" target="_blank">어린이병원</a></li>
+                            <li><a href="#" target="_blank">서울공예박물관</a></li>
+                            <li><a href="#" target="_blank">서울역사편찬원</a></li>
+                            <li><a href="#" target="_blank">종부공원녹지사업소</a></li>
+                            <li><a href="#" target="_blank">서울식뭘원</a></li>
+                            <li><a href="#" target="_blank" data-name="last">시민안전체험관</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </section> 
+    </main>
+    
+    <footer class="footer wrap">
+        <ul class="footer--nav ar--flex">
+            <li><a href="#">누리집 도우미</a></li>
+            <li><a href="#" class="bold">개인정보처리방침</a></li>
+            <li><a href="#">저작권 정책</a></li>
+            <li><a href="#">영상정보처리기 운영 관리방침</a></li>
+            <li><a href="#">누리집 바로가기</a></li>
+            <li><a href="#">누리집지도</a></li>
+            <li><a href="#"><span class="ar--scr-only">서울시 카카오톡 채널 추가</span></a></li>
+        </ul>
+        <hr>
+        <div class="footer--botm ar--flex ar--flex-jstf-sb">
+            <div>
+                <span><em class="ar--scr-only">문의 전화번호 120, 정보를 못찾으셨나요? 120다산콜재단로 물어보세요!</em></span>
+                <div class="footer--adress">
+                    <p>서울특별시청  04524 서울특별시 중구 세종대로 110 </p>
+                    <p>대표전화: 02-120 또는 02-731-2120 (365일 24시간 운영/유료)</p>
+                    <p class="copy">© Seoul Metropolitan Government all rights reserved</p>
+                </div>
+            </div>
+            <img src="./assets/images/footer_mark_wah_2025.png" alt="과학기술정보통신부 WA(WEB접근성) 품질인증 마크, 웹와치(WebWatch) 2024.11.02~2025.11.01" title="과학기술정보통신부 WA(WEB접근성) 품질인증 마크, 웹와치(WebWatch) 2024.11.02~2025.11.01">
+        </div>
+    </footer>
     <!-- //contents -->
 
     <!-- 제이쿼리 -->
@@ -368,9 +654,10 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script>
-    
+        //슬라이드
         document.addEventListener("DOMContentLoaded", function () {
-    
+            
+            let $slide = $(".slide__group .slide li a");
             let $slideSelBtn = $(".slide--sel-btn");
             let $activeSlide = ''; // 활성화된 슬라이드
             let $totalSlide = ''; //총 슬라이드 갯수
@@ -379,99 +666,97 @@
             let $control = $();
             let $ctrlNum = 0; //컨트롤러 갯수
             let $activeBtn = $();
-    
-            $(".slide--sel-btn").on("focus", function () {
-                $(".slide--sel-btn").removeClass("active");
-                $(this).addClass("active");
-                $activeSlide = $(this).next("div").find(".slide"); // 활성화된 슬라이드 선택
-                $activeBtn = $(this); // 현재 활성화된 버튼 넣기
-    
-                //변수 재할당 해주고
-                $totalSlide = $activeSlide.slick("getSlick").slideCount;
-                $currentSlide = $activeSlide.slick("slickCurrentSlide");
-                $num = $totalSlide;
-    
-                $(document).on("keydown", function (event) {
-                    let $currentFocus = $(document.activeElement);
+            let focusableElements = $('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
 
-                    if (event.key === "Tab") {
-                        if (event.shiftKey) {
-                            //역순 이동
-                            event.preventDefault();
-                            let $prevElement = getPrevFocusableElement();
-                            if ($prevElement.length) {
-                                $prevElement.focus();
-                                return; // 정방향 Tab 이동 시 슬라이드가 넘어가는 문제 방지
-                            }
-                        } else {
-                            //정방향
-                            if ($currentFocus.is(".slide--sel-btn")) {
-                                event.preventDefault();
-                                //console.log("슬라이드 버튼에서 Tab 눌림");
-
-                                if ($currentFocus.hasClass("active")) {
-                                    //console.log("슬라이드 이동 실행!");
-                                    tabSlide();
-                                } else {
-                                   // console.log("슬라이드 버튼 활성화 실행!");
-                                    tabActive($currentFocus);
-                                }
-                            }
-                        }
-                    }
-                });
-
-            });
-    
             $(".slide--sel-btn").on("click", function () {
                 $(".slide--sel-btn").removeClass("active");
                 $(this).addClass("active");
                 $activeSlide = $(this).next("div").find(".slide");// 활성화된 슬라이드 선택
             });
-    
+
+            $(".slide--sel-btn").on("focus", function () {
+                $(".slide--sel-btn").removeClass("active");
+                $(this).addClass("active");
+                $activeSlide = $(this).next("div").find(".slide"); // 활성화된 슬라이드 선택
+                $activeBtn = $(this); // 현재 활성화된 버튼 저장
+
+                //변수 재할당
+                $totalSlide = $activeSlide.slick("getSlick").slideCount;
+                $currentSlide = $activeSlide.slick("slickCurrentSlide");
+                $num = $totalSlide;
+            });
+
+            $(".slide--sel-btn").on("keydown", function (event) {
+                let $currentFocus = $(this); // 현재 포커스된 요소가 `.slide--sel-btn`
+
+                if (event.key === "Tab") {
+                    if (event.shiftKey) {
+                        // 역방향향
+                        event.preventDefault();
+                        let $prevElement = getPrevFocus();
+                        if ($prevElement.length) {
+                            $prevElement.focus();
+                            return; // 정방향 Tab 이동 시 슬라이드가 넘어가는 문제 방지
+                        }
+                    } else {
+                        // 정방향
+                        if ($currentFocus.hasClass("active")) {
+                            event.preventDefault();
+                            //tabSlide();
+                            let $nextFocus = $currentFocus.next("div").find("li a").eq(0);
+                            $nextFocus.focus();
+                        }
+                    }
+                }
+            });
+
+            $slide.on("keydown", function (event){
+
+                if (event.key === "Tab") {
+                    let $currentFocus = $(this);
+
+                    if (event.shiftKey) { //역방향
+                    } else { //정방향
+                        tabSlide();
+                    }
+                } 
+            });
+
+            $(".slide__group--together .slide--sel-btn").on("keydown", function (event) {  
+                //두번째 슬라이드 활성화 버튼에서 쉬프트 탭 누를 경우 첫번째 활성화 버튼으로 넘어감
+                if (event.key === "Tab" && event.shiftKey) {
+                    event.preventDefault();
+                    $(".slide__group--news .slide--sel-btn").focus();
+                }
+            });
+
+
             function tabSlide() {
-                console.log('진입1');
+                console.log('탭');
+
                 if (event.key === "Tab") {
                     event.preventDefault();
-                    if ($num > 0) {
-                        $activeSlide.slick("slickNext"); // 다음 슬라이드로 이동
+                    $currentSlide = $activeSlide.slick("slickCurrentSlide");
+                    if ($num > 0) { // 다음 슬라이드로 이동
+                        $activeSlide.slick("slickNext");
+                        // let $currentIndex = $activeSlide.slick('slickCurrentSlide');
+                        // $activeSlide.find('.slide--page a').eq($currentIndex - 1).focus();
+                        // $activeSlide.find('.slide--page').eq($currentIndex - 1).css('padding',       '2px');
                         $num = $num - 1;
-                    } else {
-                        console.log('진입1-1');
-                        $control = $activeSlide.closest('ul').next("div").find(".slide-prev, .slide-pause, .slide-play, .slide-next, button");
+                    } else { //슬라이드를 다 돌고 나면, controlTurn() 호출한다.
+                        console.log('슬라이드 끝');
                         controlTurn();
                     }
                 }
             }
     
             function controlTurn() { //컨트롤러 버튼 순회하기
-
-                console.log('진입2');
-                if ($ctrlNum < 5) {
-                    $control.eq($ctrlNum).focus();
-                    $ctrlNum = $ctrlNum + 1;
-                    
-                    console.log($ctrlNum);
-                    console.log('진입3');
-                } else {
-                    console.log('컨트롤의 마지막');
-                    let $parent = $currentFocus.closest('.slide__group');
-
-                    if($parent.hasClass('.slide__group--news')) { // 첫번째 버튼일 때, 두번째 버튼으로 넘기고
-                        $(".slide--sel-btn").removeClass("active");
-                        $activeBtn.closest('div').next().find('.slide--sel-btn').addClass("active");
-
-                    } else { //두번째 버튼일 때는 그다음 포커스로 넘어간다
-                        console.log('흑흑');
-                    }
-                }
-
-
+                $control = $activeSlide.closest('ul').next("div").find(".slide-prev, .slide-pause, .slide-play, .slide-next, button");
+                $control.eq($ctrlNum).focus();
             }
     
-
-            function getPrevFocusableElement() {
-                let focusableElements = $('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+            function getPrevFocus() {
+                
                 let currentIndex = focusableElements.index(document.activeElement);
 
                 if (currentIndex > 0) {
@@ -495,7 +780,7 @@
                 appendArrows : $('.slide__group--news .slide--ctl--nav'),
                 nextArrow: '<a class="slide-next" href="#" tabindex="0">다음</a>',
                 prevArrow: '<a class="slide-prev" href="#" tabindex="0">이전</a>',
-        
+                accessibility: false,
             });
     
             $('.slide__group--together .slide').slick({
@@ -508,8 +793,9 @@
                 appendArrows : $('.slide__group--together .slide--ctl--nav'),
                 nextArrow: '<a class="slide-next" href="#">다음</a>',
                 prevArrow: '<a class="slide-prev" href="#">이전</a>',
-        
+                accessibility: false,
             });
+
     
             // 일시정지 버튼 기능
             $('.slide__group--news .slide-pause').on('click', function () {
@@ -527,9 +813,54 @@
                 $slider01.slick('slickPlay'); 
             });
     
+            $('.slide').on('afterChange', function(event, slick, currentSlide){
+                let $activeSlide = $('.slide .slick-current');
+                let $currentIndex = $('.slide').slick('slickCurrentSlide');
+                console.log('내용', $currentIndex);
+                $(this).next().find("p").text($activeSlide.attr("alt"));
+                $(this).next().find(".slide--ctl--page i").text($currentIndex + 1);
+               
+            });
 
     
         });
+    </script>
+
+    <script>
+        // 하단 연관 사이트 이벤트 
+
+         document.addEventListener("DOMContentLoaded", function (){
+            let relatedBtn = document.querySelectorAll('.related-site--btn');
+            let relatedGroup = document.querySelectorAll('.related-site__group');
+
+            relatedBtn.forEach((btn, index) => {
+                btn.addEventListener('click', function(){
+
+                    let isActive = this.classList.contains("active");
+                    let otherActive = Array.from(relatedBtn).some(btn => btn !== this && btn.classList.contains("active"));
+
+                    if (!otherActive) {
+                        btn.classList.toggle('active');
+                       
+                    } else {
+                        relatedBtn.forEach(btn => btn.classList.remove("active"));
+                        this.classList.add('active');
+                    }
+                });
+            });
+
+            const lastItem = document.querySelector('.related-site__group li a[data-name="last"]');
+
+            // lastItem에 포커스 이벤트 리스너 추가
+            lastItem.addEventListener("focus", function () {
+                window.addEventListener("keydown", function(event){
+                    if (event.key === "Tab") {
+                        relatedBtn.forEach(btn => btn.classList.remove("active"));
+                    }
+                })
+            });
+
+         });
     </script>
 </body>
 </html>
