@@ -4,7 +4,6 @@
 
 body {
     &.active {
-        position: fixed;
         height: 100dvh;
         overflow: hidden;
     }
@@ -479,6 +478,10 @@ main { //공통코드
                     gap: 10px;
                     & > li {
                         width: calc(50% - 5px);
+                        & a {
+                            display: inline-block;
+                            width: 100%;    
+                        }
                         & img {
                             width: 100%;
                         }

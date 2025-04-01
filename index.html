@@ -775,11 +775,8 @@
                 var i = (slickInstc.currentSlide ? slickInstc.currentSlide : 0) + 1;
                 slide.next().find('.slide--ctl--page').text(i + '/' + slickInstc.slideCount);
             };
-
             
             
-
-
             /* Slick 슬라이더 초기화 */
             let $slider01 = $('.slide--news .slide');
             let $slider02 = $('.slide--together .slide');
@@ -872,8 +869,10 @@
 
         let lastItem = document.querySelector('.slide--all__group:nth-of-type(2) > ul > li:last-child a');
 
-        lastItem.addEventListener('keydown', function(e){
-            if(e.keyCode == 9) allShowPop.focus();
+        lastItem.addEventListener('keydown', function(e){ 
+            if(e.keyCode== 9){
+                allShowPop.focus();
+            }
         })
     </script>
 
