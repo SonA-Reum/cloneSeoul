@@ -46,14 +46,14 @@ input[type="button"]{-webkit-appearance:button; appearance:button;}
 
 *, *:before, *:after{box-sizing:border-box;-webkit-box-sizing:border-box;}
 
-/* Add replacementz focus styling here (i.e. border)*/
-//input[type="button"]:focus, button:focus, a:focus{outline:0;}
-
+/* focus */
+*:focus-visible {
+  outline: 2px dotted red;
+  outline-offset: -2px;
+}
 /* Webkit / Chrome Specific CSS to remove tap highlight color */
 input, button, a{-webkit-tap-highlight-color:transparent;}
 
-/* IE X 버튼 없애기 */
-input[type=text]::-ms-clear{display:none;}
 
 /* Chrome 배경색 및 이미지 출력 */
 *{-webkit-print-color-adjust:exact; print-color-adjust:exact;}

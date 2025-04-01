@@ -8,36 +8,40 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
-    <style>
-        /* 테스트트 */
-        a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible {
-            outline: 3px dotted red !important;
+<style>
+    /* a, area, button, input, textarea, object, select */
+    *:focus-visible{
+        outline: 2px dotted red !important;
+        outline-offset: -2px;
     }
 </style>
+    <div class="skip">
+        <a href="#inner_wrap">본문 내용 바로가기</a>
+    </div>
     <!-- hader -->
     <header>
-        <div class="header--top" tabindex="0"><p class="ar--flex ar--flex-algn-cntr wrap">이 누리집은 대한민국 공식 전자정부 누리집입니다.</p></div>
+        <div class="header--top"><p class="ar--flex ar--flex-algn-cntr wrap">이 누리집은 대한민국 공식 전자정부 누리집입니다.</p></div>
         <div class="header--nav wrap ar--flex ar--flex-algn-cntr">
             <h1 class="logo"><a href="#" title="메인페이지 바로가기"></a></h1>
             <nav class="ar--flex ar--flex-jstf-sb">
                 <ul class="gnb ar--flex ar--flex-algn-cntr" role="menu">
-                    <li role="menuitem"><a href="javascript:void(0)">서울소식</a></li>
-                    <li role="menuitem"><a href="javascript:void(0)">시민참여</a></li>
-                    <li role="menuitem"><a href="javascript:void(0)">분야별정보</a></li>
-                    <li role="menuitem"><a href="javascript:void(0)">서울소개</a></li>
-                    <li role="menuitem"><a href="javascript:void(0)">부서안내</a></li>
-                    <li role="menuitem"><a href="javascript:void(0)">정보공개</a></li>
-                    <li role="menuitem"><a href="javascript:void(0)">응답소</a></li>
+                    <li role="menuitem"><a href="#">서울소식</a></li>
+                    <li role="menuitem"><a href="#">시민참여</a></li>
+                    <li role="menuitem"><a href="#">분야별정보</a></li>
+                    <li role="menuitem"><a href="#">서울소개</a></li>
+                    <li role="menuitem"><a href="#">부서안내</a></li>
+                    <li role="menuitem"><a href="#">정보공개</a></li>
+                    <li role="menuitem"><a href="#">응답소</a></li>
                 </ul>
                 <ul class="header--cust ar--flex ar--flex-algn-cntr">
-                    <li role="menuitem"><a href="javascript:void(0)">로그인</a></li>
-                    <li role="menuitem"><a href="javascript:void(0)">나의서울</a></li>
-                    <li role="menuitem"><a href="javascript:void(0)">전자우편</a></li>
+                    <li role="menuitem"><a href="#">로그인</a></li>
+                    <li role="menuitem"><a href="#">나의서울</a></li>
+                    <li role="menuitem"><a href="#">전자우편</a></li>
                 </ul>
             </nav>
         </div>
         <div class="header--btom wrap">
-            <!-- <div class="header--lang ar--flex ar--flex-jstf-end">
+            <div class="header--lang ar--flex ar--flex-jstf-end">
                 <label for="cityLang" class="ar--scr-only">언어 선택</label>
                 <select id="cityLang" class="ar--select">
                     <option value="http://english.seoul.go.kr/?SSid=101_01">ENGLISH</option>
@@ -47,7 +51,7 @@
                     <option value="http://world.seoul.go.kr/">WorldWide</option>
                 </select>
                 <input type="button" value="GO" title="서울시 다국어 홈페이지로 이동-새창">
-            </div> -->
+            </div>
             <div class="header--srch ar--flex ar--flex-jstf-sb">
                 <h1 class="logo--new"><a href="javascript:void(0)"><span class="ar--scr-only">동행·매력 특별시 서울</span></a></h1>
                 <div class="srch">
@@ -77,37 +81,37 @@
         <div class="visual wrap ar--flex ar--flex-jstf-cntr">
             <div class="visual__unit">
                 <!-- 주요뉴스 슬라이드 -->
-                <div class="slide__group slide__group--news ar--flex">
+                <div class="slide__group slide--news ar--flex">
                     <button class="slide--sel-btn active"><i></i>주요뉴스</button>
                     <div>
-                        <ul class="slide slide--01">
-                            <li class="slide--page">
-                                <a href="#"><img src="./assets/images/slide-01_01.jpg" alt="서울이 만든 친환경 교통혁신 '기후동행카드'의 A to Z"></a>
+                        <div class="slide slide--01">
+                            <div class="slide--page">
+                                <a href="index.html"><img src="./assets/images/slide-01_01.jpg" alt="서울이 만든 친환경 교통혁신 '기후동행카드'의 A to Z"></a>
                                 <p>서울이 만든 친환경 교통혁신 '기후동행카드'의 A to Z"</p>
-                            </li>
-                            <li class="slide--page">
-                                <a href="#"><img src="./assets/images/slide-01_02.jpg" alt="서울시 병원안심동행. 혼자 병원가기 힘들 때 병원안심동행 이용하세요!"></a>
+                            </div>
+                            <div class="slide--page">
+                                <a href="index__수정.html"><img src="./assets/images/slide-01_02.jpg" alt="서울시 병원안심동행. 혼자 병원가기 힘들 때 병원안심동행 이용하세요!"></a>
                                 <p>서울시 병원안심동행. 혼자 병원가기 힘들 때 병원안심동행 이용하세요!</p>
-                            </li>
-                            <li class="slide--page"><a href="#"><img src="./assets/images/slide-01_03.jpg" alt="서울시민 누구나! '시민안전보험' 최대 2천만원 보장"></a>
+                            </div>
+                            <div  class="slide--page">
+                                <a href="객체_실습.html"><img src="./assets/images/slide-01_03.jpg" alt="서울시민 누구나! '시민안전보험' 최대 2천만원 보장"></a>
                                 <p>서울시민 누구나! '시민안전보험' 최대 2천만원 보장</p>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                         <div class="slide--ctl ar--flex ar--flex-algn-cntr ar--flex-jstf-end">
                             <div class="ar--flex ar--flex-algn-cntr">
-                                <span class="slide--ctl--page"><i>1</i>/10</span>
+                                <span class="slide--ctl--page"></span>
                                 <nav class="slide--ctl--nav ar--flex ar--flex-algn-cntr">
-                                    <a href="#" class="slide-pause">멈춤</a>
+                                    <a href="#" class="slide-pause active">멈춤</a>
                                     <a href="#" class="slide-play">재생</a>
                                 </nav>
-                                <button class="ar--btn ar--size-sm ar--flex ar--flex-algn-cntr">전체보기</button>
+                                <button class="slide--all-show--btn ar--btn ar--size-sm ar--flex ar--flex-algn-cntr">전체보기</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                
                 <!-- 시민참여 슬라이드 -->
-                <div class="slide__group slide__group--together ar--flex">
+                <div class="slide__group slide--together ar--flex">
                     <button class="slide--sel-btn"><i></i>시민참여</button>
                     <div>
                         <ul class="slide slide--02">
@@ -120,14 +124,33 @@
                         </ul>
                         <div class="slide--ctl ar--flex ar--flex-algn-cntr ar--flex-jstf-end">
                             <div class="ar--flex ar--flex-algn-cntr">
-                                <span class="slide--ctl--page"><i>1</i>/10</span>
+                                <span class="slide--ctl--page"></span>
                                 <nav class="slide--ctl--nav ar--flex ar--flex-algn-cntr">
-                                    <a href="#" class="slide-pause">멈춤</a>
+                                    <a href="#" class="slide-pause active">멈춤</a>
                                     <a href="#" class="slide-play">재생</a>
                                 </nav>
-                                <button class="ar--btn ar--size-sm ar--flex ar--flex-algn-cntr">전체보기</button>
+                                <button class="slide--all-show--btn ar--btn ar--size-sm ar--flex ar--flex-algn-cntr">전체보기</button>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="slide--all">
+                    <h4 class="ar--scr-only">슬라이드 배너 전체 보기</h4>
+                    <button class="slide--all--close"><span class="ar--scr-only">창닫기</span></button>
+                    <div class="slide--all__group wrap">
+                        <h5><img src="./assets/images/bannerAll-title1.png" alt="주요뉴스"></h5>
+                        <ul class="ar--flex ar--flex-algn-cntr">
+                            <li><a href="index.html"><img src="./assets/images/slide-01_01.jpg" alt="서울이 만든 친환경 교통혁신 '기후동행카드'의 A to Z"></a></li>
+                            <li><a href="index__수정.html"><img src="./assets/images/slide-01_02.jpg" alt="서울시 병원안심동행. 혼자 병원가기 힘들 때 병원안심동행 이용하세요!"></a></li>
+                            <li><a href="객체_실습.html"><img src="./assets/images/slide-01_03.jpg" alt="서울시민 누구나! '시민안전보험' 최대 2천만원 보장"></a></li>
+                        </ul>
+                    </div>
+                    <div class="slide--all__group wrap">
+                        <h5><img src="./assets/images/bannerAll-title2.png" alt="시민참여"></h5>
+                        <ul class="ar--flex ar--flex-algn-cntr">
+                            <li><a href="#"><img src="./assets/images/slide-02_01.jpg" alt="2026년 예산편성을 위한 시민참여예산 제안사업 공모"></a></li>
+                            <li><a href="#"><img src="./assets/images/slide-02_02.jpg" alt="2025 광화문광장 서포터즈 모집"></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -353,7 +376,7 @@
         </div>
 
         <!-- sns 배너 -->
-        <section class="sns wrap ar--flex ar--flex-algn-cntr ar--flex-jstf-sb">
+        <section ction class="sns wrap ar--flex ar--flex-algn-cntr ar--flex-jstf-sb">
             <div class="ar--flex ar--flex-algn-cntr">
                 <h3>서울시 SNS</h3>
                 <span>서울시 소통창구를 한눈에!</span>
@@ -370,6 +393,27 @@
             </ul>
         </section>
         <hr class="wrap bold">
+
+        <div class="multi-slider__area wrap">
+            <h2 class="ar--scr-only">팝업존</h2>
+            <ul class="multi-slider">
+                <li class="multi-slider--page"><a href="https://www.lost112.go.kr" target="_blank" title="새창열림"><img src="./assets/images/b960e2873d384651b2ef17e50d8e6ab1.png" alt="경찰청 유실물 종합관리시스템(LOST112) 배너 노출 요청"></a></li>
+                <li class="multi-slider--page"><a href="https://www.seoulwomanup.or.kr" target="_blank" title="새창열림"><img src="./assets/images/167d9ce9984f46089c84723faf3a37ed.jpg" alt="찾아가는 여성 취업 상담버스 일자리 부르릉"></a></li>
+                <li class="multi-slider--page"><a href="https://www.moj.go.kr/moj/3450/subview.do" target="_blank" title="새창열림"><img src="./assets/images/6cd2a8e54a3c4fc9a8024ebcbac78f88.jpg" alt="범죄피해자 원스톱 솔루션 센터 하단 이미지 배너 신청"></a></li>
+                <li class="multi-slider--page"><a href="https://delivery.acecounter.com/delivery/www/delivery/ck.php?oaparams=2__bannerid=15704__zoneid=801__cb=9f270337e3__oadest=https%3A%2F%2Fmediahub.seoul.go.kr%2Fnews%2Fissue%2FcolumnNewsList.do" target="_blank" title="새창열림"><img src="./assets/images/19bf56062b051c8338a6a178b07b2bb2.png" alt="내 손안에 서울 전문칼럼 서울을 보는 새로운 시선"></a></li>
+                <li class="multi-slider--page"><a href="https://www.forest.go.kr/kfsweb/kfi/kfs/cms/cmsView.do?cmsId=FC_002253&amp;mn=AR04_01_01_06" target="_blank" title="새창열림"><img src="./assets/images/0c87815b92ae4d5c86ec00d2ab157ade.png" alt="산불방지 국민행동요령"></a></li>
+                <li class="multi-slider--page"><a href="https://safecity.seoul.go.kr/" target="_blank" title="새창열림"><img src="./assets/images/cd30c330468d44ab8e791d036bfd6c49.png" alt="서울시 재난안전정보를 한눈에 서울안전누리"></a></li>
+                <li class="multi-slider--page"><a href="https://news.seoul.go.kr/economy/archives/565044" target="_blank" title="새창열림"><img src="./assets/images/1879e969c5ac4220a964f74c1c089ec0.jpg" alt="2025년 가맹사업 정보공개서 정기 변경등록 온라인설명회"></a></li>
+                <li class="multi-slider--page"><a href="https://www.easytask.co.kr/seoul" target="_blank" title="새창열림"><img src="./assets/images/57aa9bc800ac448db7fbf50f2ce13b42.png" alt="국내체류 외국인 가사/육아 분야 활동 희망자 대모집"></a></li>
+            </ul>
+            <div class="multi-slider--ctl ar--flex ar--flex-algn-cntr ar--flex-jstf-end">
+                <span class="multi-slider--ctl--page">1/8</span>
+                <nav class="multi-slider--ctl--nav ar--flex ar--flex-algn-cntr">
+                    <a href="#" class="slide-pause active">멈춤</a>
+                    <a href="#" class="slide-play">재생</a>
+                </nav>
+            </div>
+        </div>
 
         <!-- 직속기관, 사업소 -->
         <section class="related-site wrap">
@@ -636,7 +680,7 @@
         </ul>
         <hr>
         <div class="footer--botm ar--flex ar--flex-jstf-sb">
-            <div>
+            <div class="ar--flex">
                 <span><em class="ar--scr-only">문의 전화번호 120, 정보를 못찾으셨나요? 120다산콜재단로 물어보세요!</em></span>
                 <div class="footer--adress">
                     <p>서울특별시청  04524 서울특별시 중구 세종대로 110 </p>
@@ -653,190 +697,281 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- 슬릭 -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
 
+    <!-- 메인 슬라이드 -->
     <script>
         //슬라이드
-        document.addEventListener("DOMContentLoaded", function () {
+        $(document).ready(function() {
+
+            let focusEle = ''; //현재 포커스된 앨리먼트
+            let num = 0;
+
+
+            /* 탭접근 위한 tabindex 조작 */
+            $('.slide').on('beforeChange', function(event, slick, currentSlide) {
             
-            let $slide = $(".slide__group .slide li a");
-            let $slideSelBtn = $(".slide--sel-btn");
-            let $activeSlide = ''; // 활성화된 슬라이드
-            let $totalSlide = ''; //총 슬라이드 갯수
-            let $currentSlide = ''; //현재 슬라이드 페이지
-            let $num = 0;
-            let $control = $();
-            let $ctrlNum = 0; //컨트롤러 갯수
-            let $activeBtn = $();
-            let focusableElements = $('a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+                $('.slick-cloned a').attr('tabindex', '-1');
+                $('.slick-active a').attr('tabindex', '');
+            })
 
-            $(".slide--sel-btn").on("click", function () {
-                $(".slide--sel-btn").removeClass("active");
-                $(this).addClass("active");
-                $activeSlide = $(this).next("div").find(".slide");// 활성화된 슬라이드 선택
-            });
+            $('.slide').on('afterChange', function(event, slick, currentSlide) {
+                $('.slick-cloned a').attr('tabindex', '-1');
+                $('.slick-active a').attr('tabindex', '');
 
-            $(".slide--sel-btn").on("focus", function () {
-                $(".slide--sel-btn").removeClass("active");
-                $(this).addClass("active");
-                $activeSlide = $(this).next("div").find(".slide"); // 활성화된 슬라이드 선택
-                $activeBtn = $(this); // 현재 활성화된 버튼 저장
-
-                //변수 재할당
-                $totalSlide = $activeSlide.slick("getSlick").slideCount;
-                $currentSlide = $activeSlide.slick("slickCurrentSlide");
-                $num = $totalSlide;
-            });
-
-            $(".slide--sel-btn").on("keydown", function (event) {
-                let $currentFocus = $(this); // 현재 포커스된 요소가 `.slide--sel-btn`
-
-                if (event.key === "Tab") {
-                    if (event.shiftKey) {
-                        // 역방향향
-                        event.preventDefault();
-                        let $prevElement = getPrevFocus();
-                        if ($prevElement.length) {
-                            $prevElement.focus();
-                            return; // 정방향 Tab 이동 시 슬라이드가 넘어가는 문제 방지
-                        }
-                    } else {
-                        // 정방향
-                        if ($currentFocus.hasClass("active")) {
-                            event.preventDefault();
-                            //tabSlide();
-                            let $nextFocus = $currentFocus.next("div").find("li a").eq(0);
-                            $nextFocus.focus();
-                        }
-                    }
-                }
-            });
-
-            $slide.on("keydown", function (event){
-
-                if (event.key === "Tab") {
-                    let $currentFocus = $(this);
-
-                    if (event.shiftKey) { //역방향
-                    } else { //정방향
-                        tabSlide();
-                    }
-                } 
-            });
-
-            $(".slide__group--together .slide--sel-btn").on("keydown", function (event) {  
-                //두번째 슬라이드 활성화 버튼에서 쉬프트 탭 누를 경우 첫번째 활성화 버튼으로 넘어감
-                if (event.key === "Tab" && event.shiftKey) {
-                    event.preventDefault();
-                    $(".slide__group--news .slide--sel-btn").focus();
-                }
-            });
-
-
-            function tabSlide() {
-                console.log('탭');
-
-                if (event.key === "Tab") {
-                    event.preventDefault();
-                    $currentSlide = $activeSlide.slick("slickCurrentSlide");
-                    if ($num > 0) { // 다음 슬라이드로 이동
-                        $activeSlide.slick("slickNext");
-                        // let $currentIndex = $activeSlide.slick('slickCurrentSlide');
-                        // $activeSlide.find('.slide--page a').eq($currentIndex - 1).focus();
-                        // $activeSlide.find('.slide--page').eq($currentIndex - 1).css('padding',       '2px');
-                        $num = $num - 1;
-                    } else { //슬라이드를 다 돌고 나면, controlTurn() 호출한다.
-                        console.log('슬라이드 끝');
-                        controlTurn();
-                    }
-                }
-            }
-    
-            function controlTurn() { //컨트롤러 버튼 순회하기
-                $control = $activeSlide.closest('ul').next("div").find(".slide-prev, .slide-pause, .slide-play, .slide-next, button");
-                $control.eq($ctrlNum).focus();
-            }
-    
-            function getPrevFocus() {
+                let slickInstc = $(this).slick('getSlick');
                 
-                let currentIndex = focusableElements.index(document.activeElement);
+            })
 
-                if (currentIndex > 0) {
-                    return focusableElements.eq(currentIndex - 1);
+            /* 문서 내 포커스 시 해당 앨리먼트 업데이트 */ 
+            $(document).on('keydown.shiftTab', function(e) { 
+                if (e.keyCode == 9 || e.shiftKey) {
+                focusEle = $(document.activeElement); //재할당
                 }
-                return $(); // 빈 jQuery 객체 반환 (null 대신)
-            }
-
-
-            //Slick 슬라이더 초기화
-            let $slider01 = $('.slide__group--news .slide');
-            let $slider02 = $('.slide__group--together .slide');
-    
-            $('.slide__group--news .slide').slick({
-                infinite: true,
-                speed: 500,
-                slidesToShow: 1,
-                autoplay: false,
-                fade: true,
-                cssEase: 'linear',
-                appendArrows : $('.slide__group--news .slide--ctl--nav'),
-                nextArrow: '<a class="slide-next" href="#" tabindex="0">다음</a>',
-                prevArrow: '<a class="slide-prev" href="#" tabindex="0">이전</a>',
-                accessibility: false,
             });
-    
-            $('.slide__group--together .slide').slick({
+
+            /* 탭접근시 슬라이드 순회 및 슬라이드 페이지네이션 */ 
+            $('.slide--sel-btn').on('focusin', function(e){
+                console.log('버튼');
+                $('.slide--sel-btn').removeClass('active');
+                e.target.classList.toggle('active');
+
+                $(this).on('keydown', function(e) {
+                    if (e.keyCode == 9 && !e.shiftKey) {
+                        num = focusEle.parent().index() + 1;
+                        $('.slide').slick('slickGoTo', 0); // 탭 접근시 첫번째 슬라이드로 가기
+                        $('.slide').slick('slickPause');  // 탭 접근시 자동재생 멈춤
+                    }
+                });
+            });
+
+            $('.slide--page > a').on('focusin', function(){
+                let slide = $(this).parents('.slide'); //슬라이드
+                let slickInstc = slide.slick('getSlick');
+                num = $(this).parent().index();
+                slide.next().find('.slide--ctl--page').text(num + '/' + slickInstc.slideCount);
+                slide.slick('getSlick').currentSlide = num - 1;
+                console.log('저장', num)
+            })
+
+            /* 마우스 접근시 슬라이드 페이지네이션 표기 */ 
+
+            $('.slide').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+                updatePage($(event.target), slick);
+            });
+
+            $('.slide--sel-btn').on('click', function(){
+                let slide = $(this).next().children();
+                let slickInstc = slide.slick('getSlick'); //슬릭 객체 접근
+
+                slide.slick('slickGoTo', 0);
+
+                updatePage(slide, slickInstc);
+            });
+
+            function updatePage(slide, slickInstance) {
+                let slickInstc = slickInstance; //슬릭 인스턴스
+
+                var i = (slickInstc.currentSlide ? slickInstc.currentSlide : 0) + 1;
+                slide.next().find('.slide--ctl--page').text(i + '/' + slickInstc.slideCount);
+            };
+
+            
+            
+
+
+            /* Slick 슬라이더 초기화 */
+            let $slider01 = $('.slide--news .slide');
+            let $slider02 = $('.slide--together .slide');
+
+            var $status = $('.pagingInfo'); //paging 이 들어갈 div 혹은 p 혹은 어떠한 영역
+            var $slickElement = $('.main-slide'); //slide가 되어야하는 div
+
+
+            $('.slide--01').slick({
+                dots: false,
+                arrows: true,
                 infinite: true,
+                autoplay:  false, 
                 speed: 500,
                 slidesToShow: 1,
-                autoplay: false,
-                fade: true,
-                cssEase: 'linear',
-                appendArrows : $('.slide__group--together .slide--ctl--nav'),
+                slidesToScroll: 1,
+                accessibility: false,
+                appendArrows : $('.slide--news .slide--ctl--nav'),
                 nextArrow: '<a class="slide-next" href="#">다음</a>',
                 prevArrow: '<a class="slide-prev" href="#">이전</a>',
+            });
+    
+            $('.slide--together .slide').slick({
+                dots: false,
+                arrows: true,
+                infinite: true,
+                autoplay:  false, 
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
                 accessibility: false,
+                appendArrows : $('.slide--together .slide--ctl--nav'),
+                nextArrow: '<a class="slide-next" href="#">다음</a>',
+                prevArrow: '<a class="slide-prev" href="#">이전</a>',
             });
 
     
             // 일시정지 버튼 기능
-            $('.slide__group--news .slide-pause').on('click', function () {
+            $('.slide--news .slide-pause').on('click', function () {
                 $slider01.slick('slickPause'); 
             });
-            $('.slide__group--together .slide-pause').on('click', function () {
+            $('.slide--together .slide-pause').on('click', function () {
                 $slider01.slick('slickPause'); 
             });
     
             // 재생 버튼 기능
-            $('.slide__group--news .slide-play').on('click', function () {
+            $('.slide--news .slide-play').on('click', function () {
                 $slider01.slick('slickPlay'); 
             });
-            $('.slide__group--together .slide-play').on('click', function () {
+            $('.slide--together .slide-play').on('click', function () {
                 $slider01.slick('slickPlay'); 
-            });
-    
-            $('.slide').on('afterChange', function(event, slick, currentSlide){
-                let $activeSlide = $('.slide .slick-current');
-                let $currentIndex = $('.slide').slick('slickCurrentSlide');
-                console.log('내용', $currentIndex);
-                $(this).next().find("p").text($activeSlide.attr("alt"));
-                $(this).next().find(".slide--ctl--page i").text($currentIndex + 1);
-               
             });
 
     
         });
     </script>
+    <!-- //메인 슬라이드 -->
 
+    <!-- slide-all -->
+    <script>
+        let bodyEle = document.querySelector('body');
+        let allShowPop = document.querySelector('.slide--all');
+        let allShowBnt = document.querySelectorAll('.slide--all-show--btn');
+        let allShowClose = document.querySelector('.slide--all--close');
+
+        function hidePop() {
+            bodyEle.classList.remove('active')
+            allShowPop.style.display = 'none';
+            allShowPop.setAttribute('tabindex', '');
+            document.querySelector('.current').focus();
+            document.querySelector('.current').classList.remove('current');
+        }
+        function showePop(self) {
+            self.classList.add('current');
+            bodyEle.classList.add('active');
+            allShowPop.style.display = 'block';
+            allShowPop.setAttribute('tabindex', '0');
+            allShowPop.focus();
+            allShowPop.addEventListener('keydown', function(e){
+			    if(e.keyCode == 9) this.removeAttribute('tabindex'); 
+		    });
+        }
+        allShowBnt.forEach(btn => {
+            btn.addEventListener('click', function(event){
+                allShowPop.classList.contains('active') ? hidePop(event.target) : showePop(event.target);
+            });
+        });
+        
+        allShowClose.addEventListener('click', hidePop);
+
+        let lastItem = document.querySelector('.slide--all__group:nth-of-type(2) > ul > li:last-child a');
+
+        lastItem.addEventListener('keydown', function(e){
+            if(e.keyCode == 9) allShowPop.focus();
+        })
+    </script>
+
+    <!-- 멀티 슬라이드 -->
+    <script>
+        $(document).ready(function() {
+
+           /* 탭접근 위한 tabindex 조작 */
+            $('.multi-slider').on('beforeChange', function(event, slick, current) {
+                $('.multi-slider--page.slick-cloned a').attr('tabindex', '-1');
+                $('.multi-slider--page.slick-active a').attr('tabindex', '');
+            })
+
+            $('.multi-slider').on('afterChange', function(event, slick, currentSlide) {
+                $('.multi-slider--page.slick-cloned a').attr('tabindex', '-1');
+                $('.multi-slider--page.slick-active a').attr('tabindex', '');
+                slidePage('auto');
+            })
+
+           /* 탭접근시 슬라이드 순회 및 슬라이드 페이지네이션 */ 
+            $('.sns > ul > li:last-child > a').on('keydown', function(e) {
+                if (e.keyCode == 9 && !e.shiftKey) {
+                    let firstNum = $('.multi-slider--page[data-slick-index="1"]').index();
+                    $('.multi-slider').slick('slickGoTo', 0);
+                    $('.multi-slider').slick('slickPause');
+                }
+            });
+
+            $('.multi-slider--page > a').on('focusin', function(e){
+                slidePage('focusin', $(e.target));
+            })
+
+            /* arrows 클릭 이벤트 */ 
+            $(document).on('click', '.multi-slider--ctl--nav .slick-arrow', function(){
+                slidePage('click');
+            });
+          
+
+
+
+           // 슬릭 초기화
+            $('.multi-slider').slick({
+                dots: false,
+                arrows: true,
+                infinite: true,
+                autoplay:  true, 
+                speed: 500,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                accessibility: false,
+                appendArrows : $('.multi-slider--ctl--nav'),
+                nextArrow: '<a class="slide-next" href="#"">다음</a>',
+                prevArrow: '<a class="slide-prev" href="#"">이전</a>',
+            });
+
+            //멈춤 버튼 기능
+            $('.multi-slider--ctl .slide-pause').on('click', function () {
+                event.preventDefault();
+                $('.multi-slider').slick('slickPause'); 
+            });
+
+           // 재생 버튼 기능
+            $('.multi-slider--ctl .slide-play').on('click', function () {
+                event.preventDefault();
+                $('.multi-slider').slick('slickPlay'); 
+            });
+
+           // 함수
+            function slidePage(eventType, event) {
+                let slide = $('.multi-slider');
+                let slickInstc = slide.slick('getSlick');
+                let current = $('.multi-slider--page.slick-current');
+                let num = 0;
+                
+
+                if (eventType == 'focusin'){
+                    console.log('포커스')
+                    num = event.parent().index() - 2;
+                    $('.multi-slider--ctl--page').text(num + '/' + slickInstc.slideCount);
+                } else {
+                    console.log('click')
+                    num = current.index() - 2;
+                    $('.multi-slider--ctl--page').text(num + '/' + slickInstc.slideCount);
+                } 
+            }
+        });
+    </script>
+   <!-- //멀티 슬라이드 -->
+
+    <!-- footer navi -->
     <script>
         // 하단 연관 사이트 이벤트 
-
-         document.addEventListener("DOMContentLoaded", function (){
+        document.addEventListener("DOMContentLoaded", function (){
             let relatedBtn = document.querySelectorAll('.related-site--btn');
             let relatedGroup = document.querySelectorAll('.related-site__group');
 
             relatedBtn.forEach((btn, index) => {
                 btn.addEventListener('click', function(){
-
                     let isActive = this.classList.contains("active");
                     let otherActive = Array.from(relatedBtn).some(btn => btn !== this && btn.classList.contains("active"));
 
@@ -863,5 +998,6 @@
 
          });
     </script>
+    <!-- footer navi -->
 </body>
 </html>
