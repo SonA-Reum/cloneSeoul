@@ -732,7 +732,6 @@
 
             /* 탭접근시 슬라이드 순회 및 슬라이드 페이지네이션 */ 
             $('.slide--sel-btn').on('focusin', function(e){
-                console.log('버튼');
                 $('.slide--sel-btn').removeClass('active');
                 e.target.classList.toggle('active');
 
@@ -751,7 +750,6 @@
                 num = $(this).parent().index();
                 slide.next().find('.slide--ctl--page').text(num + '/' + slickInstc.slideCount);
                 slide.slick('getSlick').currentSlide = num - 1;
-                console.log('저장', num)
             })
 
             /* 마우스 접근시 슬라이드 페이지네이션 표기 */ 
@@ -952,11 +950,9 @@
                 
 
                 if (eventType == 'focusin'){
-                    console.log('포커스')
                     num = event.parent().index() - 2;
                     $('.multi-slider--ctl--page').text(num + '/' + slickInstc.slideCount);
                 } else {
-                    console.log('click')
                     num = current.index() - 2;
                     $('.multi-slider--ctl--page').text(num + '/' + slickInstc.slideCount);
                 } 
@@ -971,34 +967,50 @@
         document.addEventListener("DOMContentLoaded", function (){
             let relatedBtn = document.querySelectorAll('.related-site--btn');
             let relatedGroup = document.querySelectorAll('.related-site__group');
+            let isActiveGnb = false;
+            const lastItem = document.querySelector('.related-site__group li a[data-name="last"]');
 
             relatedBtn.forEach((btn, index) => {
-                btn.addEventListener('click', function(){
-                    let isActive = this.classList.contains("active");
-                    let otherActive = Array.from(relatedBtn).some(btn => btn !== this && btn.classList.contains("active"));
+                btn.addEventListener('click', function(e){
+                    
+                    let otherActive = Array.from(relatedBtn).some(btn => btn !== this && btn.classList.contains("active")); // btn이 현재요소가 아니고, btn이 클래스명 active를 갖고 있으면 true
+                    let target = e.target.closest('button');
 
-                    if (!otherActive) {
-                        btn.classList.toggle('active');
-                       
-                    } else {
+                    if (otherActive) { //클릭된 버튼 이외에 다른 버튼이 활성화된 상태라면
                         relatedBtn.forEach(btn => btn.classList.remove("active"));
-                        this.classList.add('active');
+                        target.classList.add('active');
+                        isActiveGnb = true;
+                        console.log('한번 이상 진입시');
+
+                    } else {
+                        if (target.classList.contains('active')) {// 클릭된 버튼이 이미 활성 상태라면 비활성화처리
+                            target.classList.remove('active');
+                            isActiveGnb = false;
+                            console.log('e.target이 이미 활성화')
+
+                        } else { // 처음 클릭했다면
+                            console.log('첫진입')
+                            target.classList.add('active');
+                            isActiveGnb = true;
+                        }
                     }
                 });
             });
+            document.addEventListener('click', function(e){
+                if (!e.target.closest('.related-site__unit') && isActiveGnb) { // 클릭한 요소가 .related-site__unit 내부에 속하지 않고, GNB가 활성화되어 있을 때
+                    relatedBtn.forEach(btn => btn.classList.remove("active"));
+                    isActiveGnb = false;
+                }
+            })
 
-            const lastItem = document.querySelector('.related-site__group li a[data-name="last"]');
-
-            // lastItem에 포커스 이벤트 리스너 추가
+            // lastItem에 포커스 이벤트 추가
             lastItem.addEventListener("focus", function () {
                 window.addEventListener("keydown", function(event){
                     if (event.key === "Tab") {
                         relatedBtn.forEach(btn => btn.classList.remove("active"));
+                        isActiveGnb = false;
                     }
                 })
-            });
-            $(document).on('click', '.multi-slider--ctl--nav .slick-arrow', function(){
-                slidePage('click');
             });
 
          });
