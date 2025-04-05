@@ -100,7 +100,7 @@
                         </div>
                         <div class="slide--ctl ar--flex ar--flex-algn-cntr ar--flex-jstf-end">
                             <div class="ar--flex ar--flex-algn-cntr">
-                                <span class="slide--ctl--page"></span>
+                                <span class="slide--ctl--page">1/3</span>
                                 <nav class="slide--ctl--nav ar--flex ar--flex-algn-cntr">
                                     <a href="#" class="slide-pause active">멈춤</a>
                                     <a href="#" class="slide-play">재생</a>
@@ -701,135 +701,158 @@
 
     <!-- 메인 슬라이드 -->
     <script>
-        //슬라이드
-        $(document).ready(function() {
+    //슬라이드
+    $(document).ready(function() {
 
-            let focusEle = ''; //현재 포커스된 앨리먼트
-            let num = 0;
+        let $slider01 = $('.slide--news .slide');
+        let $slider02 = $('.slide--together .slide');
+        let focusEle = ''; //현재 포커스된 앨리먼트
+        let num; //a링크 탭 접근시, a링크 index 관리
+        let isLinkFocus = false; //a링크 탭 접근 여부
+        
+        ////////////////////////////////////////////////////////////////////////////
+        ///////   1. 클릭을 하면, 활성화된 슬라이드의 index를 가져올 수 있다.    ////
+        ///////   2. a링크 탭 접근시, a링크가 화면에 보여지더라도 실제 슬릭이    ///
+        ///////   페이징처리가 되는 것이 아니므로, 변수 num에 따로 인덱스를      ///
+        ///////   저장하여 페이징 처리를 해야한다.                               
+        ////////////////////////////////////////////////////////////////////////////
 
 
-            /* 탭접근 위한 tabindex 조작 */
-            $('.slide').on('beforeChange', function(event, slick, currentSlide) {
+
+        /* 슬릭 초기화 */ 
+        initSlick('.slide--01', '.slide--news .slide--ctl--nav');
+        initSlick('.slide--02', '.slide--together .slide--ctl--nav');
+
+        $('.slide--news .slide-pause, .slide--together .slide-pause').on('click', function (e) {
+            let slide = $(e.target).parents('.slide--ctl').prev();
+            togglePlayPause(slide , 'pause');
+        });
+
+        $('.slide--news .slide-play, .slide--together .slide-play').on('click', function (e) {
+            let slide = $(e.target).parents('.slide--ctl').prev();
+            togglePlayPause(slide, 'play');
+        });
+
+
+        /* 탭접근 위한 tabindex 조작, 첫 로딩시 페이징 표기 */
+        setTabIndex();
+
+        $('.slide').on('afterChange', function(event, slick, currentSlide) {
+            setTabIndex();
+
+            let slickInstc = $(this).slick('getSlick');
             
-                $('.slick-cloned a').attr('tabindex', '-1');
-                $('.slick-active a').attr('tabindex', '');
-            })
+            if (!isLinkFocus) {
+                updatePage($(event.target), slickInstc);
+            }
+        })
 
-            $('.slide').on('afterChange', function(event, slick, currentSlide) {
-                $('.slick-cloned a').attr('tabindex', '-1');
-                $('.slick-active a').attr('tabindex', '');
+        /* 탭접근시 슬라이드 순회 및 슬라이드 페이지네이션 */ 
+        $('.slide--sel-btn').on('focusin', function(e){
+            $('.slide--sel-btn').removeClass('active');
+            e.target.classList.toggle('active');
 
-                let slickInstc = $(this).slick('getSlick');
-                
-            })
+            $(this).on('keydown', function(e) {
+                if (e.keyCode == 9 && !e.shiftKey) {
 
-            /* 문서 내 포커스 시 해당 앨리먼트 업데이트 */ 
-            $(document).on('keydown.shiftTab', function(e) { 
-                if (e.keyCode == 9 || e.shiftKey) {
-                focusEle = $(document.activeElement); //재할당
+                    $('.slide').slick('slickGoTo', 0); // 탭 접근시 첫번째 슬라이드로 가기
+                    $('.slide').slick('slickPause');  // 탭 접근시 자동재생 멈춤
                 }
             });
+        });
 
-            /* 탭접근시 슬라이드 순회 및 슬라이드 페이지네이션 */ 
-            $('.slide--sel-btn').on('focusin', function(e){
-                $('.slide--sel-btn').removeClass('active');
-                e.target.classList.toggle('active');
+        $('.slide--page > a').on('focusin', function(){
+            let slide = $(this).parents('.slide'); //슬라이드
+            let slickInstc = slide.slick('getSlick');
 
-                $(this).on('keydown', function(e) {
-                    if (e.keyCode == 9 && !e.shiftKey) {
-                        num = focusEle.parent().index() + 1;
-                        $('.slide').slick('slickGoTo', 0); // 탭 접근시 첫번째 슬라이드로 가기
-                        $('.slide').slick('slickPause');  // 탭 접근시 자동재생 멈춤
-                    }
-                });
+            isLinkFocus = true;
+
+            num = $(this).parent().index();
+            updatePage(slide, slickInstc, num)
+            
+        })
+
+        $('.slide-prev').on('click', function(e){
+
+            if (!isLinkFocus) return;
+            
+            let slidePage = $(this).parent().prev();
+            let slickInstc = $(this).parents('.slide--ctl').prev().slick('getSlick');
+            let total = slickInstc.slideCount;
+
+            if (num == 1) {
+                num = total;
+            } else {
+                num = num - 1;
+            }
+            slidePage.text(num + '/' + total);
+        });
+
+        $('.slide-next').on('click', function(e){
+            
+            if (!isLinkFocus) return;
+
+            let slidePage = $(this).parent().prev();
+            let slickInstc = $(this).parents('.slide--ctl').prev().slick('getSlick');
+            let total = slickInstc.slideCount;
+            
+            if (num == 3) {
+                num = 1;
+            } else {
+                num = num + 1;
+            }
+            slidePage.text(num + '/' + total);
+        });
+
+        $('.slide--sel-btn').on('click', function(){
+            let slide = $(this).next().children();
+            let slickInstc = slide.slick('getSlick');
+
+            slide.slick('slickGoTo', 0);
+
+            updatePage(slide, slickInstc);
+        });
+
+        function initSlick(selector, navSelector) {
+            $(selector).slick({
+                dots: false,
+                arrows: true,
+                infinite: true,
+                autoplay: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                accessibility: false,
+                appendArrows: $(navSelector),
+                nextArrow: '<a class="slide-next" href="#">다음</a>',
+                prevArrow: '<a class="slide-prev" href="#">이전</a>',
             });
+        }
 
-            $('.slide--page > a').on('focusin', function(){
-                let slide = $(this).parents('.slide'); //슬라이드
-                let slickInstc = slide.slick('getSlick');
-                num = $(this).parent().index();
+        function togglePlayPause(slider, action) {
+            if (action === 'pause') {
+                slider.slick('slickPause');
+            } else if (action === 'play') {
+                slider.slick('slickPlay');
+            }
+        }
+
+        function updatePage(slide, slickInstc, num) {
+            if (num) {
+                /* a링크 탭 접근시 */
                 slide.next().find('.slide--ctl--page').text(num + '/' + slickInstc.slideCount);
-                slide.slick('getSlick').currentSlide = num - 1;
-            })
-
-            /* 마우스 접근시 슬라이드 페이지네이션 표기 */ 
-
-            $('.slide').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
-                updatePage($(event.target), slick);
-            });
-
-            $('.slide--sel-btn').on('click', function(){
-                let slide = $(this).next().children();
-                let slickInstc = slide.slick('getSlick'); //슬릭 객체 접근
-
-                slide.slick('slickGoTo', 0);
-
-                updatePage(slide, slickInstc);
-            });
-
-            function updatePage(slide, slickInstance) {
-                let slickInstc = slickInstance; //슬릭 인스턴스
-
+            } else {
                 var i = (slickInstc.currentSlide ? slickInstc.currentSlide : 0) + 1;
                 slide.next().find('.slide--ctl--page').text(i + '/' + slickInstc.slideCount);
-            };
-            
-            
-            /* Slick 슬라이더 초기화 */
-            let $slider01 = $('.slide--news .slide');
-            let $slider02 = $('.slide--together .slide');
+            }
+        };
 
-            var $status = $('.pagingInfo'); //paging 이 들어갈 div 혹은 p 혹은 어떠한 영역
-            var $slickElement = $('.main-slide'); //slide가 되어야하는 div
+        function setTabIndex() {
+            $('.slick-cloned a').attr('tabindex', '-1');
+            $('.slick-active a').attr('tabindex', '');
+        }
 
-
-            $('.slide--01').slick({
-                dots: false,
-                arrows: true,
-                infinite: true,
-                autoplay:  false, 
-                speed: 500,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                accessibility: false,
-                appendArrows : $('.slide--news .slide--ctl--nav'),
-                nextArrow: '<a class="slide-next" href="#">다음</a>',
-                prevArrow: '<a class="slide-prev" href="#">이전</a>',
-            });
-    
-            $('.slide--together .slide').slick({
-                dots: false,
-                arrows: true,
-                infinite: true,
-                autoplay:  false, 
-                speed: 500,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                accessibility: false,
-                appendArrows : $('.slide--together .slide--ctl--nav'),
-                nextArrow: '<a class="slide-next" href="#">다음</a>',
-                prevArrow: '<a class="slide-prev" href="#">이전</a>',
-            });
-
-    
-            // 일시정지 버튼 기능
-            $('.slide--news .slide-pause').on('click', function () {
-                $slider01.slick('slickPause'); 
-            });
-            $('.slide--together .slide-pause').on('click', function () {
-                $slider01.slick('slickPause'); 
-            });
-    
-            // 재생 버튼 기능
-            $('.slide--news .slide-play').on('click', function () {
-                $slider01.slick('slickPlay'); 
-            });
-            $('.slide--together .slide-play').on('click', function () {
-                $slider01.slick('slickPlay'); 
-            });
-
-    
-        });
+    });
     </script>
     <!-- //메인 슬라이드 -->
 
@@ -839,7 +862,23 @@
         let allShowPop = document.querySelector('.slide--all');
         let allShowBnt = document.querySelectorAll('.slide--all-show--btn');
         let allShowClose = document.querySelector('.slide--all--close');
-        let lastItem = document.querySelector('.slide--all__group:nth-of-type(2) > ul > li:last-child a'); //팝업의 마지막 요소소
+        let lastItem = document.querySelector('.slide--all__group:nth-of-type(2) > ul > li:last-child a'); //팝업의 마지막 요소
+
+
+        allShowClose.addEventListener('click', hidePop);
+
+        allShowBnt.forEach(btn => {
+            btn.addEventListener('click', function(event){
+                allShowPop.classList.contains('active') ? hidePop(event.target) : showePop(event.target);
+            });
+        });
+
+        lastItem.addEventListener('keydown', function(e){ 
+            if(e.keyCode== 9){
+                allShowPop.setAttribute('tabindex', '0');
+                allShowPop.focus();
+            }
+        })
 
         function hidePop() {
             bodyEle.classList.remove('active')
@@ -856,31 +895,43 @@
             allShowPop.focus();
 
             allShowPop.addEventListener('keydown', function(e){
-		        if(e.keyCode == 9) {
+		    if(e.keyCode == 9) {
                     this.removeAttribute('tabindex');
                 }
 		    });
         }
-
-        allShowClose.addEventListener('click', hidePop);
-
-        allShowBnt.forEach(btn => {
-            btn.addEventListener('click', function(event){
-                allShowPop.classList.contains('active') ? hidePop(event.target) : showePop(event.target);
-            });
-        });
-
-        lastItem.addEventListener('keydown', function(e){ 
-            if(e.keyCode== 9){
-                allShowPop.setAttribute('tabindex', '0');
-                allShowPop.focus();
-            }
-        })
     </script>
 
     <!-- 멀티 슬라이드 -->
     <script>
         $(document).ready(function() {
+
+            // 슬릭 초기화
+            $('.multi-slider').slick({
+                dots: false,
+                arrows: true,
+                infinite: true,
+                autoplay:  true, 
+                speed: 500,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                accessibility: false,
+                appendArrows : $('.multi-slider--ctl--nav'),
+                nextArrow: '<a class="slide-next" href="#"">다음</a>',
+                prevArrow: '<a class="slide-prev" href="#"">이전</a>',
+            });
+
+            //멈춤 버튼 기능
+            $('.multi-slider--ctl .slide-pause').on('click', function () {
+                event.preventDefault();
+                $('.multi-slider').slick('slickPause'); 
+            });
+
+           // 재생 버튼 기능
+            $('.multi-slider--ctl .slide-play').on('click', function () {
+                event.preventDefault();
+                $('.multi-slider').slick('slickPlay'); 
+            });
 
            /* 탭접근 위한 tabindex 조작 */
             $('.multi-slider').on('beforeChange', function(event, slick, current) {
@@ -912,43 +963,12 @@
                 slidePage('click');
             });
 
-
-
-           // 슬릭 초기화
-            $('.multi-slider').slick({
-                dots: false,
-                arrows: true,
-                infinite: true,
-                autoplay:  true, 
-                speed: 500,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                accessibility: false,
-                appendArrows : $('.multi-slider--ctl--nav'),
-                nextArrow: '<a class="slide-next" href="#"">다음</a>',
-                prevArrow: '<a class="slide-prev" href="#"">이전</a>',
-            });
-
-            //멈춤 버튼 기능
-            $('.multi-slider--ctl .slide-pause').on('click', function () {
-                event.preventDefault();
-                $('.multi-slider').slick('slickPause'); 
-            });
-
-           // 재생 버튼 기능
-            $('.multi-slider--ctl .slide-play').on('click', function () {
-                event.preventDefault();
-                $('.multi-slider').slick('slickPlay'); 
-            });
-
-           // 함수
             function slidePage(eventType, event) {
                 let slide = $('.multi-slider');
                 let slickInstc = slide.slick('getSlick');
                 let current = $('.multi-slider--page.slick-current');
                 let num = 0;
                 
-
                 if (eventType == 'focusin'){
                     num = event.parent().index() - 2;
                     $('.multi-slider--ctl--page').text(num + '/' + slickInstc.slideCount);
@@ -973,7 +993,7 @@
             relatedBtn.forEach((btn, index) => {
                 btn.addEventListener('click', function(e){
                     
-                    let otherActive = Array.from(relatedBtn).some(btn => btn !== this && btn.classList.contains("active")); // btn이 현재요소가 아니고, btn이 클래스명 active를 갖고 있으면 true
+                    let otherActive = Array.from(relatedBtn).some(btn => btn !== this && btn.classList.contains("active")); // 현재 요소가 아닌 btn이 클래스명 active를 갖고 있으면 true
                     let target = e.target.closest('button');
 
                     if (otherActive) { //클릭된 버튼 이외에 다른 버튼이 활성화된 상태라면
